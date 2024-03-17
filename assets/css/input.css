@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    background-color: #0E1118;
+    color: whitesmoke;
+}
+
+@layer components {
+    .navbar {
+        @apply sticky top-0 flex flex-wrap sm:flex-nowrap sm:gap-x-8 items-center justify-between rounded-b-md mt-5 mb-[100px] p-4 bg-primary
+    }
+
+    .menu-btn {
+        @apply border-2 rounded-md hover:text-slate-400 hover:border-slate-400 sm:hidden
+    }
+
+    .menu {
+        @apply list-none flex flex-col sm:gap-x-10 gap-y-1 w-full transition-all duration-500 sm:flex-row cursor-pointer overflow-hidden
+    }
+
+    .link {
+        @apply hover:text-slate-400 text-2xl
+    }
+
+    .item {
+        @apply flex justify-center items-center cursor-default gap-2
+    }
+
+    .card {
+        @apply w-4/6 xl:w-[60%] bg-secondary rounded-md p-2 gap-4 overflow-hidden
+    }
+
+    .li {
+        @apply mb-10 text-2xl italic justify-start hover:text-slate-400 cursor-pointer
+    }
+
+    .footer {
+        @apply flex bottom-0 w-full h-[130px] bg-secondary overflow-hidden z-50
+    }
+
+    .footer-container {
+        @apply container flex flex-col lg:flex-row lg:items-center justify-between items-baseline py-2 overflow-hidden
+    }
+}
