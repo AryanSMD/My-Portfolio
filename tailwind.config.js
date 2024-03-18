@@ -6,11 +6,11 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        primary: '#0E1118',
-        secondary: '#253F6F',
-        tertiary: '#7F9FDA',
-        fourth: 'red',
-        textColor: '#151515',
+        primary: '#252525',
+        secondary: '#414141',
+        tertiary: '#525252',
+        fourth: '#E1012F',
+        navbarColor: '#101010',
       }
     },
     container: {

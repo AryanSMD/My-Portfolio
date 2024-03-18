@@ -10,15 +10,15 @@
     }
 
     .navbar {
-        @apply sticky top-0 flex flex-wrap sm:flex-nowrap sm:gap-x-8 items-center justify-between bg-opacity-90 rounded-md mb-[100px] p-4 bg-primary
+        @apply sticky top-0 flex flex-wrap sm:flex-nowrap sm:gap-x-8 items-center justify-between bg-opacity-90 rounded-b-md mb-[100px] p-4 bg-navbarColor
     }
 
     .logo {
-        @apply text-fourth text-3xl overflow-visible mr-4
+        @apply text-fourth text-3xl overflow-visible mr-4 cursor-default
     }
 
     .content {
-        @apply flex flex-col items-center gap-[120px]
+        @apply flex flex-col items-center gap-[70px]
     }
 
     .image-container {
@@ -50,7 +50,7 @@
     }
 
     .card-title {
-        @apply text-3xl font-bold italic mb-8 text-fourth
+        @apply text-3xl font-bold italic mb-8 text-fourth cursor-default
     }
 
     .skills-list {
@@ -78,7 +78,7 @@
     }
 
     .footer {
-        @apply flex bottom-0 w-full h-[130px] bg-primary overflow-hidden z-50
+        @apply flex bottom-0 w-full h-[130px] bg-navbarColor overflow-hidden z-50
     }
 
     .footer-container {
