@@ -8,12 +8,12 @@
     <link rel="icon" type="image/x-icon" href="">
     <title>Aryan SMD</title>
 </head>
-<body>
+<body class="body" style="background-image: url('/assets/images/background-2.jpg')">
     <!-- wrapper -->
     <div id="about" class="container mb-20">
         <!-- header -->
         <div class="navbar" x-data="{ showMenu: false }">
-            <div class="text-fourth text-3xl overflow-visible mr-4">
+            <div class="logo">
                 LOGO
             </div>
             <button class="menu-btn" x-on:click="showMenu = !showMenu">
@@ -31,11 +31,11 @@
         <!-- /header -->
 
         <!-- /content -->
-        <div class="flex flex-col items-center gap-[120px]">
+        <div class="content">
             <!-- /about -->
             <div class="card flex flex-col md:flex-row md:items-center">
-                <div class="w-full h-1/2 flex justify-center items-center md:w-1/2 md:h-full">
-                    <img class="w-auto h-full rounded-md md:w-auto md:h-[300px] lg:w-[400px] lg:h-auto lg:rounded-full " src="assets/images/pic.jpg" alt="...">
+                <div class="image-container">
+                    <img class="image" src="assets/images/pic.jpg" alt="Loading...">
                 </div>
                 <div class="flex flex-col h-1/6 md:w-1/2 lg:gap-12">
                     <h1 class="text-2xl mb-2 lg:h-auto xl:text-3xl text-center font-bold">
@@ -55,8 +55,8 @@
             <!-- skills -->
             <div id="skills"></div>
             <div class="card p-8">
-                <h1 class="text-3xl font-bold italic mb-8 text-fourth">Skills</h1>
-                <div class="flex flex-col items-start md:flex-row h-[330px] overflow-auto">
+                <h1 class="card-title">Skills</h1>
+                <div class="skills-list">
                     <div class="h-full w-1/2 mb-14 md:mb-0">
                         <ul>
                             <li class="item li">Web Development</li>
@@ -82,17 +82,17 @@
             <!-- experiences -->
             <div id="experiences"></div>
             <div class="card p-8">
-                <h1 class="text-3xl font-bold italic mb-8 text-fourth">Experiences</h1>
-                <div class="flex flex-col items-center gap-10 mb-10">
-                    <a class="link w-full hover:text-textColor text-textColor" href="https://github.com/naeimrezaeian/ACT-ADMIN">
+                <h1 class="card-title">Experiences</h1>
+                <div class="case-list">
+                    <a class="text-2xl w-full" href="https://github.com/naeimrezaeian/ACT-ADMIN">
                         <div class="case">
-                            <h1 class="font-bold italic flex items-center gap-2">
+                            <h1 class="title">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
                                 </svg>
                                 ACT-ADMIN
                             </h1>
-                            <p class="overflow-auto text-slate-800">
+                            <p class="text">
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, culpa.
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, culpa.
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, culpa.
@@ -100,15 +100,15 @@
                             </p>
                         </div>
                     </a>
-                    <a class="link w-full hover:text-textColor text-textColor" href="https://github.com/naeimrezaeian/act">
+                    <a class="text-2xl w-full" href="https://github.com/naeimrezaeian/act">
                         <div class="case mb-5">
-                            <h1 class="font-bold italic flex items-center gap-2">
+                            <h1 class="title">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
                                 </svg>
                                 ACT
                             </h1>
-                            <p class="overflow-auto text-slate-800">
+                            <p class="text">
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, culpa.
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, culpa.
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, culpa.

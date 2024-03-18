@@ -3,18 +3,34 @@
 @tailwind utilities;
 
 
-body {
-    background-color: #0E1118;
-    color: whitesmoke;
-}
-
 @layer components {
+
+    .body {
+        @apply bg-fixed bg-cover backdrop-brightness-[40%] text-white
+    }
+
     .navbar {
-        @apply sticky top-0 flex flex-wrap sm:flex-nowrap sm:gap-x-8 items-center justify-between rounded-b-md mt-5 mb-[100px] p-4 bg-primary
+        @apply sticky top-0 flex flex-wrap sm:flex-nowrap sm:gap-x-8 items-center justify-between bg-opacity-90 rounded-md mb-[100px] p-4 bg-primary
+    }
+
+    .logo {
+        @apply text-fourth text-3xl overflow-visible mr-4
+    }
+
+    .content {
+        @apply flex flex-col items-center gap-[120px]
+    }
+
+    .image-container {
+        @apply w-full h-1/2 flex justify-center items-center md:w-1/2 md:h-full
+    }
+
+    .image {
+        @apply w-auto h-full rounded-md md:w-auto md:h-[300px] lg:w-[400px] lg:h-auto lg:rounded-full
     }
 
     .menu-btn {
-        @apply border-2 rounded-md hover:text-slate-400 hover:border-slate-400 sm:hidden
+        @apply border-2 rounded-md hover:text-tertiary hover:border-slate-400 sm:hidden
     }
 
     .menu {
@@ -22,7 +38,7 @@ body {
     }
 
     .link {
-        @apply hover:text-slate-400 text-2xl
+        @apply hover:text-tertiary text-2xl
     }
 
     .item {
@@ -30,19 +46,39 @@ body {
     }
 
     .card {
-        @apply w-full lg:w-[60%] bg-secondary rounded-sm p-2 gap-4 overflow-hidden
+        @apply w-full lg:w-[60%] bg-primary rounded-md p-4 gap-4 overflow-hidden
+    }
+
+    .card-title {
+        @apply text-3xl font-bold italic mb-8 text-fourth
+    }
+
+    .skills-list {
+        @apply flex flex-col items-start md:flex-row h-[330px] overflow-auto
     }
 
     .li {
-        @apply mb-10 text-2xl italic justify-start  hover:text-slate-400 cursor-pointer
+        @apply mb-10 text-2xl italic justify-start hover:text-tertiary
+    }
+
+    .case-list {
+        @apply flex flex-col items-center gap-10 mb-10
     }
 
     .case {
-        @apply w-full flex flex-col max-h-[200px] bg-tertiary p-4 rounded-md gap-2 hover:bg-slate-300
+        @apply w-full flex flex-col max-h-[200px] bg-secondary p-4 rounded-md gap-2 hover:bg-tertiary
+    }
+
+    .title {
+        @apply font-bold italic flex items-center gap-2
+    }
+
+    .text {
+        @apply overflow-auto text-slate-200
     }
 
     .footer {
-        @apply flex bottom-0 w-full h-[130px] bg-secondary overflow-hidden z-50
+        @apply flex bottom-0 w-full h-[130px] bg-primary overflow-hidden z-50
     }
 
     .footer-container {
