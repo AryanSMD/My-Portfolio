@@ -30,11 +30,15 @@ body {
     }
 
     .card {
-        @apply w-full lg:w-[60%] bg-secondary rounded-md p-2 gap-4 overflow-hidden
+        @apply w-full lg:w-[60%] bg-secondary rounded-sm p-2 gap-4 overflow-hidden
     }
 
     .li {
-        @apply mb-10 text-2xl italic justify-start hover:text-slate-400 cursor-pointer
+        @apply mb-10 text-2xl italic justify-start  hover:text-slate-400 cursor-pointer
+    }
+
+    .case {
+        @apply w-full flex flex-col max-h-[200px] bg-tertiary p-4 rounded-md gap-2 hover:bg-slate-300
     }
 
     .footer {

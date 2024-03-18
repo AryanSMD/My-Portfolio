@@ -13,7 +13,7 @@
     <div id="about" class="container mb-20">
         <!-- header -->
         <div class="navbar" x-data="{ showMenu: false }">
-            <div class="text-tertiary text-3xl overflow-visible mr-4">
+            <div class="text-fourth text-3xl overflow-visible mr-4">
                 LOGO
             </div>
             <button class="menu-btn" x-on:click="showMenu = !showMenu">
@@ -24,14 +24,14 @@
             <ul class="menu sm:max-h-80" :class="showMenu ? 'max-h-80 mt-8 gap-y-4' : 'max-h-0'">
                 <a href="#about" class="link">About</a>
                 <a href="#skills" class="link">Skills</a>
-                <a href="#" class="link">Experiences</a>
+                <a href="#experiences" class="link">Experiences</a>
                 <a href="#contact" class="link">Contact</a>
             </ul>
         </div>
         <!-- /header -->
 
         <!-- /content -->
-        <div class="flex flex-col items-center gap-[200px]">
+        <div class="flex flex-col items-center gap-[120px]">
             <!-- /about -->
             <div class="card flex flex-col md:flex-row md:items-center">
                 <div class="w-full h-1/2 flex justify-center items-center md:w-1/2 md:h-full">
@@ -39,7 +39,7 @@
                 </div>
                 <div class="flex flex-col h-1/6 md:w-1/2 lg:gap-12">
                     <h1 class="text-2xl mb-2 lg:h-auto xl:text-3xl text-center font-bold">
-                        Hi there, it's <span class="italic text-tertiary">Aryan SMD</span>
+                        Hi there, it's <span class="italic text-fourth">Aryan SMD</span>
                     </h1>
                     <div class="flex-col lg:h-5/6 overflow-auto">
                         <p class="text-xl text-center">
@@ -53,33 +53,73 @@
             <!-- /about -->
 
             <!-- skills -->
-            <div id="skills" class="card p-8">
-                <h1 class="text-3xl font-bold italic mb-8 text-tertiary">My Skills :</h1>
+            <div id="skills"></div>
+            <div class="card p-8">
+                <h1 class="text-3xl font-bold italic mb-8 text-fourth">Skills</h1>
                 <div class="flex flex-col items-start md:flex-row h-[330px] overflow-auto">
                     <div class="h-full w-1/2 mb-14 md:mb-0">
                         <ul>
                             <li class="item li">Web Development</li>
-                            <li class="item li">HTML5</li>
                             <li class="item li">Javascript</li>
-                            <li class="item li">Git</li>
+                            <li class="item li">HTML5</li>
                             <li class="item li">Vue.js</li>
+                            <li class="item li">Git</li>
                         </ul>                        
                     </div>
                     <div class="h-full w-1/2">
                         <ul>
                             <li class="item li">Front-End Development</li>
-                            <li class="item li">CSS3</li>
-                            <li class="item li">TypeScript</li>
                             <li class="item li">TailwindCss</li>
+                            <li class="item li">TypeScript</li>
                             <li class="item li">Nuxt.js</li>
+                            <li class="item li">CSS3</li>
                         </ul>                            
                     </div>
                 </div>
             </div>
             <!-- /skills -->
-            
-        </div>
 
+            <!-- experiences -->
+            <div id="experiences"></div>
+            <div class="card p-8">
+                <h1 class="text-3xl font-bold italic mb-8 text-fourth">Experiences</h1>
+                <div class="flex flex-col items-center gap-10 mb-10">
+                    <a class="link w-full hover:text-textColor text-textColor" href="https://github.com/naeimrezaeian/ACT-ADMIN">
+                        <div class="case">
+                            <h1 class="font-bold italic flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
+                                </svg>
+                                ACT-ADMIN
+                            </h1>
+                            <p class="overflow-auto text-slate-800">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, culpa.
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, culpa.
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, culpa.
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, culpa.
+                            </p>
+                        </div>
+                    </a>
+                    <a class="link w-full hover:text-textColor text-textColor" href="https://github.com/naeimrezaeian/act">
+                        <div class="case mb-5">
+                            <h1 class="font-bold italic flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
+                                </svg>
+                                ACT
+                            </h1>
+                            <p class="overflow-auto text-slate-800">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, culpa.
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, culpa.
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, culpa.
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, culpa.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- /experiences -->
+        </div>
         <!-- /content -->
     </div>
     <!-- /wrapper -->

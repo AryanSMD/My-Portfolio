@@ -8,7 +8,9 @@ module.exports = {
       colors:{
         primary: '#0E1118',
         secondary: '#253F6F',
-        tertiary: 'red',
+        tertiary: '#7F9FDA',
+        fourth: 'red',
+        textColor: '#151515',
       }
     },
     container: {
