@@ -30,7 +30,7 @@ body {
     }
 
     .card {
-        @apply w-4/6 xl:w-[60%] bg-secondary rounded-md p-2 gap-4 overflow-hidden
+        @apply w-full lg:w-[60%] bg-secondary rounded-md p-2 gap-4 overflow-hidden
     }
 
     .li {

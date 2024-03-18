@@ -664,7 +664,7 @@ video {
 }
 
 .card {
-  width: 66.666667%;
+  width: 100%;
   gap: 1rem;
   overflow: hidden;
   border-radius: 0.375rem;
@@ -673,7 +673,7 @@ video {
   padding: 0.5rem;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   .card {
     width: 60%;
   }
@@ -759,6 +759,10 @@ video {
   }
 }
 
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -777,22 +781,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
-.mb-16 {
-  margin-bottom: 4rem;
-}
-
-.mb-14 {
-  margin-bottom: 3.5rem;
 }
 
 .flex {
@@ -871,10 +859,6 @@ video {
   gap: 200px;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
 .gap-y-4 {
   row-gap: 1rem;
 }
@@ -933,10 +917,6 @@ body {
 }
 
 @media (min-width: 640px) {
-  .sm\:mb-0 {
-    margin-bottom: 0px;
-  }
-
   .sm\:max-h-80 {
     max-height: 20rem;
   }
