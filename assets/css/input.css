@@ -13,7 +13,7 @@
     }
 
     .logo {
-        @apply text-fourth text-3xl overflow-visible md:mr-4 cursor-default ml-4 w-[135px] h-[52px]
+        @apply text-fourth text-3xl overflow-visible md:mr-4 cursor-default w-[135px] h-[52px]
     }
 
     .content {

@@ -617,7 +617,6 @@ video {
 }
 
 .logo {
-  margin-left: 1rem;
   height: 52px;
   width: 135px;
   cursor: default;
@@ -984,6 +983,10 @@ video {
   }
 }
 
+.-mt-20 {
+  margin-top: -5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -998,26 +1001,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.-mt-10 {
-  margin-top: -2.5rem;
-}
-
-.-mt-16 {
-  margin-top: -4rem;
-}
-
-.-mt-14 {
-  margin-top: -3.5rem;
-}
-
-.-mt-12 {
-  margin-top: -3rem;
-}
-
-.-mt-20 {
-  margin-top: -5rem;
 }
 
 .flex {
