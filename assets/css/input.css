@@ -49,7 +49,7 @@
     }
 
     .card {
-        @apply w-full lg:w-[60%] bg-primary rounded-md p-4 gap-4 overflow-hidden transition-all duration-500 hover:scale-110
+        @apply w-full lg:w-[60%] bg-primary rounded-md p-4 gap-4 overflow-hidden transition-all duration-500 hover:scale-105
     }
 
     .card-title {
