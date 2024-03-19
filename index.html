@@ -12,7 +12,7 @@
     <!-- wrapper -->
     <div id="about" class="container mb-32">
         <!-- header -->
-        <div class="navbar" x-data="{ showMenu: false }">
+        <div class="navbar" x-data="{ showMenu: false }" x-on:click.outside="showMenu = false">
             <img class="logo" src="assets/images/logo.png" alt="...">
             <button class="menu-btn" x-on:click="showMenu = !showMenu">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
