@@ -9,7 +9,7 @@ module.exports = {
         primary: '#252525',
         secondary: '#414141',
         tertiary: '#525252',
-        fourth: '#E1012F',
+        fourth: '#00FFAB',
         navbarColor: '#101010',
       }
     },
