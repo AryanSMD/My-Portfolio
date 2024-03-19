@@ -97,7 +97,7 @@
     }
 
     .footer {
-        @apply flex bottom-0 w-full h-[130px] bg-navbarColor overflow-hidden z-50
+        @apply flex flex-col justify-center gap-2 lg:gap-6 bottom-0 w-full h-auto lg:h-[130px] bg-navbarColor overflow-hidden z-50
     }
 
     .footer-container {
