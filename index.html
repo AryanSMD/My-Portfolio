@@ -10,7 +10,7 @@
 </head>
 <body class="body" style="background-image: url('assets/images/background.jpg')">
     <!-- wrapper -->
-    <div id="about" class="container mb-32">
+    <div class="container mb-32" id="about" >
         <!-- header -->
         <div class="navbar" x-data="{ showMenu: false }" x-on:click.outside="showMenu = false">
             <img class="logo" src="assets/images/logo.png" alt="...">
@@ -82,15 +82,6 @@
                     <div class="h-full w-full md:w-1/2">
                         <ul>
                             <li class="item li">
-                                <h1 class="self-start">Web Development</h1>
-                                <div class="box">
-                                    <div class="range">
-                                        <div class="w-[60%] rate"></div>
-                                    </div>
-                                    <h1 class="percent">60%</h1>
-                                </div>
-                            </li>
-                            <li class="item li">
                                 <h1 class="self-start">Vue.js</h1>
                                 <div class="box">
                                     <div class="range">
@@ -126,19 +117,19 @@
                                     <h1 class="percent">95%</h1>
                                 </div>
                             </li>
+                            <li class="item li">
+                                <h1 class="self-start">Web Development</h1>
+                                <div class="box">
+                                    <div class="range">
+                                        <div class="w-[60%] rate"></div>
+                                    </div>
+                                    <h1 class="percent">60%</h1>
+                                </div>
+                            </li>
                         </ul>                        
                     </div>
                     <div class="h-full w-full md:w-1/2">
                         <ul>
-                            <li class="item li">
-                                <h1 class="self-start">Front-End Development</h1>
-                                <div class="box">
-                                    <div class="range">
-                                        <div class="w-[90%] rate"></div>
-                                    </div>
-                                    <h1 class="percent">90%</h1>
-                                </div>
-                            </li>
                             <li class="item li">
                                 <h1 class="self-start">Nuxt.js</h1>
                                 <div class="box">
@@ -173,6 +164,15 @@
                                         <div class="w-[95%] rate"></div>
                                     </div>
                                     <h1 class="percent">95%</h1>
+                                </div>
+                            </li>
+                            <li class="item li">
+                                <h1 class="self-start">Front-End Development</h1>
+                                <div class="box">
+                                    <div class="range">
+                                        <div class="w-[90%] rate"></div>
+                                    </div>
+                                    <h1 class="percent">90%</h1>
                                 </div>
                             </li>
                         </ul>                            
