@@ -4,7 +4,6 @@ const skills = document.getElementById('skillsLink');
 const experiences = document.getElementById('experiencesLink');
 const contact = document.getElementById('contactLink');
 
-
 function setStyle(val) {
     val.classList.add('text-tertiary');
     val.classList.add('md:scale-105');
