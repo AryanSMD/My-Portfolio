@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/assets/css/output.css">
-    <script defer src="src/assets/alpinejs3.13.1.min.js"></script>
     <link rel="icon" type="image/x-icon" href="src/assets/images/icon.png">
     <title>Aryan SMD</title>
 </head>
@@ -12,7 +11,7 @@
     <!-- wrapper -->
     <div class="container mb-32" id="about" >
         <!-- header -->
-        <div id="nav" class="navbar" x-data="{ showMenu: false }" @click.outside="showMenu = false">
+        <div class="navbar" x-data="{ showMenu: false }" @click.outside="showMenu = false">
             <img class="logo" src="src/assets/images/logo.png" alt="...">
             <button class="menu-btn" @click="showMenu = !showMenu">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
@@ -263,8 +262,8 @@
     </div>
     <div id="contact"></div>
     <!-- /footer -->
-
-
+    
+    <script defer src="src/assets/alpinejs3.13.1.min.js"></script>
     <script src="src/main.js"></script>
 </body>
 </html>

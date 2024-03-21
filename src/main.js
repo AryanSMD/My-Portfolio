@@ -27,7 +27,7 @@ document.onscroll = () => {
     const scroll = window.scrollY;
 
     if (window.screen.width > 767) {
-        if (scroll > 1) {
+        if (scroll < 1) {
             clear();
         } else if (scroll > 1 && scroll < 330) {
             clear();
