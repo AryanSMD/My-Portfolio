@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/output.css">
-    <script defer src="assets/alpinejs3.13.1.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="assets/images/icon.png">
+    <link rel="stylesheet" href="src/assets/css/output.css">
+    <script defer src="src/assets/alpinejs3.13.1.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="src/assets/images/icon.png">
     <title>Aryan SMD</title>
 </head>
-<body class="body" style="background-image: url('assets/images/background.jpg')">
+<body class="body" style="background-image: url('src/assets/images/background.jpg')">
     <!-- wrapper -->
     <div class="container mb-32" id="about" >
         <!-- header -->
-        <div class="navbar" x-data="{ showMenu: false }" x-on:click.outside="showMenu = false">
-            <img class="logo" src="assets/images/logo.png" alt="...">
-            <button class="menu-btn" x-on:click="showMenu = !showMenu">
+        <div id="nav" class="navbar" x-data="{ showMenu: false }" @click.outside="showMenu = false">
+            <img class="logo" src="src/assets/images/logo.png" alt="...">
+            <button class="menu-btn" @click="showMenu = !showMenu">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>                     
             </button>
             <ul class="menu md:max-h-80" :class="showMenu ? 'max-h-80 mt-8 gap-y-4' : 'max-h-0'">
-                <a href="#about" class="link" x-on:click="showMenu = false">About</a>
-                <a href="#education" class="link" x-on:click="showMenu = false">Education</a>
-                <a href="#skills" class="link" x-on:click="showMenu = false">Skills</a>
-                <a href="#experiences" class="link" x-on:click="showMenu = false">Experiences</a>
-                <a href="#contact" class="link" x-on:click="showMenu = false">Contact</a>
+                <a id="aboutLink" href="#about" class="link" @click="showMenu = false, clear()">About</a>
+                <a id="educationLink" href="#education" class="link" @click="showMenu = false, clear()">Education</a>
+                <a id="skillsLink" href="#skills" class="link" @click="showMenu = false, clear()">Skills</a>
+                <a id="experiencesLink" href="#experiences" class="link" @click="showMenu = false, clear()">Experiences</a>
+                <a id="contactLink" href="#contact" class="link" @click="showMenu = false, clear()">Contact</a>
             </ul>
         </div>
         <!-- /header -->
@@ -34,7 +34,7 @@
             <!-- /about -->
             <div class="card flex flex-col md:flex-row md:items-center">
                 <div class="image-container">
-                    <img class="image" src="assets/images/pic.jpg" alt="Loading...">
+                    <img class="image" src="src/assets/images/pic.jpg" alt="Loading...">
                 </div>
                 <div class="flex flex-col h-1/6 md:w-1/2 lg:gap-12 cursor-default">
                     <h1 class="text-2xl mb-2 lg:h-auto xl:text-3xl text-center font-bold">
@@ -221,7 +221,7 @@
     <!-- /wrapper -->
 
     <!-- footer -->
-    <div class="footer" id="contact">
+    <div class="footer">
         <div class="footer-container">
             <div class="item animat">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
@@ -261,6 +261,10 @@
             © Copyright. Design And Developed By <span class="font-bold">AryanSMD</span>
         </div>
     </div>
+    <div id="contact"></div>
     <!-- /footer -->
+
+
+    <script src="src/main.js"></script>
 </body>
 </html>
