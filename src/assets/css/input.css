@@ -85,7 +85,7 @@
     }
 
     .case {
-        @apply w-full flex flex-col max-h-[200px] bg-secondary p-4 rounded-md gap-2 hover:bg-tertiary shadow-sm shadow-[#0D0D0D]
+        @apply w-full flex flex-col max-h-[200px] bg-secondary p-4 rounded-md gap-2 hover:bg-tertiary shadow-sm shadow-[#0D0D0D] transition-all duration-300
     }
 
     .title {
