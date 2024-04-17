@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    @apply
+    m-0 p-0 box-border
+}
 
 body {
     @apply
-    m-0 p-0 box-border bg-fixed bg-cover backdrop-brightness-[40%] text-white
+    bg-fixed bg-cover backdrop-brightness-[40%] text-white
 }
 
 .container .navbar {

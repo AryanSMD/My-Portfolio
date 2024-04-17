@@ -722,12 +722,15 @@ video {
   color: rgb(82 82 82 / var(--tw-text-opacity));
 }
 
-body {
+* {
   margin: 0px;
   box-sizing: border-box;
+  padding: 0px;
+}
+
+body {
   background-size: cover;
   background-attachment: fixed;
-  padding: 0px;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   --tw-backdrop-brightness: brightness(40%);
