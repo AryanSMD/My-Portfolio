@@ -5,7 +5,7 @@
 
 body {
     @apply
-    box-border m-0 p-0 bg-fixed bg-cover backdrop-brightness-[40%] text-white
+    m-0 p-0 box-border bg-fixed bg-cover backdrop-brightness-[40%] text-white
 }
 
 .container .navbar {
