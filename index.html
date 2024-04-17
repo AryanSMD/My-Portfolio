@@ -7,9 +7,9 @@
     <link rel="icon" type="image/x-icon" href="src/assets/images/icon.png">
     <title>Aryan SMD</title>
 </head>
-<body class="body" style="background-image: url('src/assets/images/background.jpg')">
+<body style="background-image: url('src/assets/images/background.jpg')">
     <!-- wrapper -->
-    <div class="container mb-32" id="about" >
+    <div class="container mb-32" id="about">
         <!-- header -->
         <div class="navbar" x-data="{ showMenu: false }" @click.outside="showMenu = false">
             <img class="logo" src="src/assets/images/logo.png" alt="...">
@@ -19,7 +19,8 @@
                 </svg>                     
             </button>
             <ul class="menu md:max-h-80" :class="showMenu ? 'max-h-80 mt-8 gap-y-4' : 'max-h-0'">
-                <a id="aboutLink" href="#about" class="link" @click="showMenu = false, clear()">About</a>
+                <a id="aboutLink" href="#about" class="link" @click="showMenu = false, clear()">
+                    About</a>
                 <a id="educationLink" href="#education" class="link" @click="showMenu = false, clear()">Education</a>
                 <a id="skillsLink" href="#skills" class="link" @click="showMenu = false, clear()">Skills</a>
                 <a id="experiencesLink" href="#experiences" class="link" @click="showMenu = false, clear()">Experiences</a>
@@ -31,7 +32,7 @@
         <!-- /content -->
         <div class="content -mt-20 md:mt-0">
             <!-- /about -->
-            <div class="card flex flex-col md:flex-row md:items-center">
+            <div class="card flex flex-col md:flex-row md:items-center" style="padding: 16px;">
                 <div class="image-container">
                     <img class="image" src="src/assets/images/pic.jpg" alt="Loading...">
                 </div>
@@ -52,7 +53,7 @@
 
             <!-- education -->
             <div id="education"></div>
-            <div class="card p-8">
+            <div class="card">
                 <h1 class="card-title">Education</h1>
                 <a class="text-2xl w-full" href="https://www.linkedin.com/school/razi-university-kermanshah/">
                     <div class="case max-h-full mb-5">
@@ -75,7 +76,7 @@
 
             <!-- skills -->
             <div id="skills"></div>
-            <div class="card p-8">
+            <div class="card">
                 <h1 class="card-title">Skills</h1>
                 <div class="skills-list">
                     <div class="h-full w-full md:w-1/2">
@@ -182,7 +183,7 @@
 
             <!-- experiences -->
             <div id="experiences"></div>
-            <div class="card p-8">
+            <div class="card">
                 <h1 class="card-title">Experiences</h1>
                 <div class="case-list">
                     <a class="text-2xl w-full" href="https://github.com/naeimrezaeian/act">

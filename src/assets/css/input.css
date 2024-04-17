@@ -3,104 +3,133 @@
 @tailwind utilities;
 
 
-@layer components {
-    .body {
-        @apply bg-fixed bg-cover backdrop-brightness-[40%] text-white
-    }
+body {
+    @apply
+    box-border m-0 p-0 bg-fixed bg-cover backdrop-brightness-[40%] text-white
+}
 
-    .navbar {
-        @apply sticky top-0 flex flex-wrap md:flex-nowrap md:gap-x-8 items-center justify-between bg-opacity-90 rounded-b-md mb-[100px] p-4 bg-navbarColor z-50
-    }
+.container .navbar {
+    @apply
+    sticky top-0 flex flex-wrap md:flex-nowrap md:gap-x-8 items-center justify-between
+    bg-opacity-90 rounded-b-md mb-[100px] p-4 bg-navbarColor z-50
+}
 
-    .logo {
-        @apply text-fourth text-3xl overflow-visible md:mr-4 cursor-default w-[100px] h-[50px]
-    }
+.container .navbar .logo {
+    @apply
+    text-fourth text-3xl overflow-visible md:mr-4 cursor-default w-[100px] h-[50px]
+}
 
-    .content {
-        @apply flex flex-col items-center gap-[70px] lg:gap-[100px] lg:py-24
-    }
+.container .content {
+    @apply
+    flex flex-col items-center gap-[70px] lg:gap-[100px] lg:py-24
+}
 
-    .image-container {
-        @apply w-full h-1/2 flex justify-center items-center md:w-1/2 md:h-full
-    }
+.container .content .card .image-container {
+    @apply
+    w-full h-1/2 flex justify-center items-center md:w-1/2 md:h-full
+}
 
-    .image {
-        @apply w-auto h-full rounded-md md:w-auto md:h-[300px] lg:w-[400px] lg:h-auto lg:rounded-full
-    }
+.container .content .card .image-container .image {
+    @apply
+    w-auto h-full rounded-md md:w-auto md:h-[300px] lg:w-[400px] lg:h-auto lg:rounded-full
+}
 
-    .menu-btn {
-        @apply border-2 rounded-md hover:text-tertiary hover:border-slate-400 md:hidden
-    }
+.container .navbar .menu-btn {
+    @apply
+    border-2 rounded-md hover:text-tertiary hover:border-slate-400 md:hidden
+}
 
-    .menu {
-        @apply list-none flex flex-col md:gap-x-8 lg:gap-x-10 gap-y-1 w-full transition-all duration-500 md:flex-row cursor-pointer overflow-hidden
-    }
+.container .navbar .menu {
+    @apply
+    list-none flex flex-col md:gap-x-8 lg:gap-x-10 gap-y-1 w-full transition-all
+    duration-700 md:flex-row cursor-pointer overflow-hidden
+}
 
-    .link {
-        @apply hover:text-tertiary text-2xl transition duration-300 md:hover:scale-105
-    }
+.container .navbar .menu .link {
+    @apply
+    hover:text-tertiary text-2xl transition duration-300 md:hover:scale-105
+}
 
-    .item {
-        @apply flex justify-center items-center md:text-xl cursor-default gap-2
-    }
+.item {
+    @apply
+    flex justify-center items-center md:text-xl cursor-default gap-2
+}
 
-    .animat {
-        @apply transition duration-300 hover:scale-110
-    }
+.footer .footer-container .animat {
+    @apply
+    transition duration-300 hover:scale-110
+}
 
-    .card {
-        @apply w-full lg:w-[60%] bg-primary rounded-md p-4 gap-4 overflow-hidden transition-all duration-500 hover:scale-105 lg:hover:scale-105 shadow-md shadow-[#0D0D0D]
-    }
+.container .content .card {
+    @apply
+    w-full lg:w-[60%] bg-primary rounded-md p-8 gap-4 overflow-hidden transition-all
+    duration-500 hover:scale-105 lg:hover:scale-105 shadow-md shadow-[#0D0D0D]
+}
 
-    .card-title {
-        @apply text-3xl font-bold italic mb-8 text-fourth cursor-default
-    }
+.container .content .card .card-title {
+    @apply
+    text-3xl font-bold italic mb-8 text-fourth cursor-default
+}
 
-    .skills-list {
-        @apply flex flex-col items-start md:flex-row
-    }
+.container .content .card .skills-list {
+    @apply
+    flex flex-col items-start md:flex-row
+}
 
-    .li {
-        @apply mb-8 md:mb-2 text-2xl italic justify-start flex flex-col
-    }
+.container .content .card .skills-list .li {
+    @apply
+    mb-8 md:mb-2 text-2xl italic justify-start flex flex-col
+}
 
-    .box {
-        @apply w-full h-auto flex items-center
-    }
+.container .content .card .skills-list .li .box {
+    @apply
+    w-full h-auto flex items-center
+}
 
-    .range {
-        @apply w-2/3 h-[2px] bg-secondary rounded-lg overflow-hidden flex justify-start
-    }
+.container .content .card .skills-list .li .box .range {
+    @apply
+    w-2/3 h-[2px] bg-secondary rounded-lg overflow-hidden flex justify-start
+}
 
-    .rate {
-        @apply h-full bg-white rounded-r-md
-    }
+.container .content .card .skills-list .li .box .range .rate {
+    @apply
+    h-full bg-white rounded-r-md
+}
 
-    .percent {
-        @apply w-1/3 -mt-1 text-center text-xl
-    }
+.container .content .card .skills-list .li .box .percent {
+    @apply
+    w-1/3 -mt-1 text-center text-xl
+}
 
-    .case-list {
-        @apply flex flex-col items-center gap-10 mb-10
-    }
+.container .content .card .case-list {
+    @apply
+    flex flex-col items-center gap-10 mb-10
+}
 
-    .case {
-        @apply w-full flex flex-col max-h-[200px] bg-secondary p-4 rounded-md gap-2 hover:bg-tertiary shadow-sm shadow-[#0D0D0D] transition-all duration-300
-    }
+.container .content .card .case {
+    @apply
+    w-full flex flex-col max-h-[200px] bg-secondary p-4 rounded-md gap-2
+    hover:bg-tertiary shadow-sm shadow-[#0D0D0D] transition-all duration-300
+}
 
-    .title {
-        @apply font-bold italic flex items-center gap-2
-    }
+.container .content .card .case .title {
+    @apply
+    font-bold italic flex items-center gap-2
+}
 
-    .text {
-        @apply overflow-auto text-slate-200
-    }
+.container .content .card .case .text {
+    @apply
+    overflow-auto text-slate-200
+}
 
-    .footer {
-        @apply flex flex-col justify-center gap-2 lg:gap-6 bottom-0 w-full h-auto lg:h-[130px] bg-navbarColor overflow-hidden z-50
-    }
+.footer {
+    @apply
+    flex flex-col justify-center gap-2 lg:gap-6 bottom-0 w-full h-auto lg:h-[130px]
+    bg-navbarColor overflow-hidden z-50
+}
 
-    .footer-container {
-        @apply container flex flex-col lg:flex-row lg:items-center justify-between items-baseline py-2 overflow-hidden
-    }
+.footer .footer-container {
+    @apply
+    container flex flex-col lg:flex-row lg:items-center justify-between items-baseline
+    py-2 overflow-hidden
 }
