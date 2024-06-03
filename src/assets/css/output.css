@@ -594,10 +594,6 @@ video {
   margin-bottom: 8rem;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
 .mt-8 {
   margin-top: 2rem;
 }
@@ -664,6 +660,10 @@ video {
 
 .cursor-default {
   cursor: default;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-col {
