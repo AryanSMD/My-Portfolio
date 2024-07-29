@@ -5,6 +5,7 @@ const experiences = document.getElementById('experiencesLink');
 const contact = document.getElementById('contactLink');
 const cards = document.getElementsByClassName('card');
 
+
 function setStyle(val) {
     val.classList.add('text-tertiary');
     val.classList.add('md:scale-105');
@@ -23,6 +24,7 @@ function clear() {
         cards[i].classList?.remove('scale-105');
     }
 };
+
 
 document.onscroll = () => {
     const scroll = window.scrollY;
