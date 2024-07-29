@@ -3,6 +3,7 @@ const education = document.getElementById('educationLink');
 const skills = document.getElementById('skillsLink');
 const experiences = document.getElementById('experiencesLink');
 const contact = document.getElementById('contactLink');
+const cards = document.getElementsByClassName('card');
 
 function setStyle(val) {
     val.classList.add('text-tertiary');
@@ -18,29 +19,35 @@ function clear() {
     removeStyle(education);
     removeStyle(experiences);
     removeStyle(contact);
+    for(let i in cards) {
+        cards[i].classList?.remove('scale-105');
+    }
 };
 
 document.onscroll = () => {
-    const body = document.body.scrollHeight;
-    const screen = window.screen.height;
     const scroll = window.scrollY;
 
     if (window.screen.width > 767) {
         if (scroll < 1) {
             clear();
-        } else if (scroll > 1 && scroll < 330) {
+            cards[0].classList.add('scale-105');
+        } else if (cards[0].getBoundingClientRect().bottom > 200) {
             clear();
             setStyle(about);
-        } else if (scroll > 330 && scroll < 895) {
+            cards[0].classList.add('scale-105');
+        } else if (cards[1].getBoundingClientRect().bottom > 200) {
             clear();
             setStyle(education);
-        } else if (scroll > 895 && scroll < 1390) {
+            cards[1].classList.add('scale-105');
+        } else if (cards[2].getBoundingClientRect().bottom > 200) {
             clear();
             setStyle(skills);
-        } else if (scroll > 1390 && scroll < (body - screen)) {
+            cards[2].classList.add('scale-105');
+        } else if (cards[3].getBoundingClientRect().bottom > 700) {
             clear();
             setStyle(experiences);
-        } else if (scroll > (body - screen)) {
+            cards[3].classList.add('scale-105');
+        } else if (cards[3].getBoundingClientRect().bottom > 200) {
             clear();
             setStyle(contact);
         }
