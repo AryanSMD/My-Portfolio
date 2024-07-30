@@ -18,10 +18,16 @@ function setStyle(val) {
         linkSvg[i].classList?.add('!translate-y-0');
     }
 }
+
+function setCardStyle(index) {
+    cards[index].classList.add('scale-105');
+}
+
 function removeStyle(val) {
     val.classList.remove('text-fourth');
     val.classList.remove('md:scale-105');
 }
+
 function removeNavStyle() {
     navbar.classList?.remove('!bg-opacity-60');
     for(let i in linkText) {
@@ -29,6 +35,7 @@ function removeNavStyle() {
         linkSvg[i].classList?.remove('!translate-y-0');
     }
 }
+
 function clear() {
     removeStyle(about);
     removeStyle(skills);
@@ -38,7 +45,7 @@ function clear() {
     for(let i in cards) {
         cards[i].classList?.remove('scale-105');
     }
-};
+}
 
 
 document.onscroll = () => {
@@ -48,23 +55,23 @@ document.onscroll = () => {
         if (scroll < 1) {
             clear();
             removeNavStyle();
-            cards[0].classList.add('scale-105');
+            setCardStyle(0);
         } else if (cards[0].getBoundingClientRect().bottom > 300) {
             clear();0
             setStyle(about);
-            cards[0].classList.add('scale-105');
+            setCardStyle(0);
         } else if (cards[1].getBoundingClientRect().bottom > 300) {
             clear();
             setStyle(education);
-            cards[1].classList.add('scale-105');
+            setCardStyle(1);
         } else if (cards[2].getBoundingClientRect().bottom > 300) {
             clear();
             setStyle(skills);
-            cards[2].classList.add('scale-105');
+            setCardStyle(2);
         } else if (cards[3].getBoundingClientRect().bottom > 700) {
             clear();
             setStyle(experiences);
-            cards[3].classList.add('scale-105');
+            setCardStyle(3);
         } else if (cards[3].getBoundingClientRect().bottom > 200) {
             clear();
             setStyle(contact);
