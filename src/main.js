@@ -1,3 +1,6 @@
+const navbar = document.getElementById('navbar');
+const linkText = document.getElementsByClassName('link-text');
+const linkSvg = document.getElementsByClassName('link-svg');
 const about = document.getElementById('aboutLink');
 const education = document.getElementById('educationLink');
 const skills = document.getElementById('skillsLink');
@@ -7,12 +10,24 @@ const cards = document.getElementsByClassName('card');
 
 
 function setStyle(val) {
-    val.classList.add('text-tertiary');
-    val.classList.add('md:scale-105');
+    val.classList.add('text-fourth');
+    val.classList.add('text-fourth');
+    navbar.classList.add('!bg-opacity-60');
+    for(let i in linkText) {
+        linkText[i].classList?.add('translate-y-[100px]');
+        linkSvg[i].classList?.add('!translate-y-0');
+    }
 }
 function removeStyle(val) {
-    val.classList.remove('text-tertiary');
+    val.classList.remove('text-fourth');
     val.classList.remove('md:scale-105');
+}
+function removeNavStyle() {
+    navbar.classList?.remove('!bg-opacity-60');
+    for(let i in linkText) {
+        linkText[i].classList?.remove('translate-y-[100px]');
+        linkSvg[i].classList?.remove('!translate-y-0');
+    }
 }
 function clear() {
     removeStyle(about);
@@ -32,16 +47,17 @@ document.onscroll = () => {
     if (window.screen.width > 767) {
         if (scroll < 1) {
             clear();
+            removeNavStyle();
             cards[0].classList.add('scale-105');
-        } else if (cards[0].getBoundingClientRect().bottom > 200) {
-            clear();
+        } else if (cards[0].getBoundingClientRect().bottom > 300) {
+            clear();0
             setStyle(about);
             cards[0].classList.add('scale-105');
-        } else if (cards[1].getBoundingClientRect().bottom > 200) {
+        } else if (cards[1].getBoundingClientRect().bottom > 300) {
             clear();
             setStyle(education);
             cards[1].classList.add('scale-105');
-        } else if (cards[2].getBoundingClientRect().bottom > 200) {
+        } else if (cards[2].getBoundingClientRect().bottom > 300) {
             clear();
             setStyle(skills);
             cards[2].classList.add('scale-105');

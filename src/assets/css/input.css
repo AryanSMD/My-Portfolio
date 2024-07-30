@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+    --primary: #252525;
+    --secondary: #414141;
+    --tertiary: #525252;
+    --fourth: #00FFAB;
+}
+
+
 * {
     @apply
     m-0 p-0 box-border
@@ -12,15 +21,47 @@ body {
     bg-fixed bg-cover backdrop-brightness-[40%] text-white
 }
 
-.container .navbar {
+.navbar {
     @apply
-    sticky top-0 flex flex-wrap md:flex-nowrap md:gap-x-8 items-center justify-between
-    bg-opacity-90 rounded-b-md mb-[100px] p-4 bg-navbarColor z-50
+    sticky w-full top-0 bg-opacity-90 md:bg-opacity-0 mb-[100px] py-4 bg-navbarColor z-50
+    transition-colors duration-300 overflow-hidden
 }
 
-.container .navbar .logo {
+.navbar .container {
     @apply
-    text-fourth text-3xl overflow-visible md:mr-4 cursor-default w-[100px] h-[50px]
+    flex flex-wrap md:flex-nowrap md:gap-x-8 items-center justify-between
+}
+
+.navbar .container .logo {
+    @apply
+    text-fourth text-3xl overflow-visible md:mr-4 cursor-default w-[100px] h-[40px]
+}
+
+.navbar .container .menu-btn {
+    @apply
+    border-2 rounded-md hover:text-tertiary hover:border-slate-400 md:hidden
+}
+
+.navbar .container .menu {
+    @apply
+    list-none flex flex-col md:gap-x-8 lg:gap-x-10 gap-y-1 w-full transition-all
+    duration-700 md:flex-row cursor-default overflow-hidden
+}
+
+.navbar .container .menu .link {
+    @apply
+    text-xl flex flex-col items-center relative hover:text-fourth
+    transition-all duration-300
+}
+
+.navbar .container .menu .link .text {
+    @apply
+    transition-transform duration-300
+}
+
+.navbar .container .menu .link .svg {
+    @apply
+    w-[25px] h-[25px] translate-y-[-100px] absolute hidden md:block transition-transform duration-300
 }
 
 .container .content {
@@ -36,22 +77,6 @@ body {
 .container .content .card .image-container .image {
     @apply
     w-auto h-full rounded-md md:w-auto md:h-[300px] lg:w-[400px] lg:h-auto lg:rounded-full
-}
-
-.container .navbar .menu-btn {
-    @apply
-    border-2 rounded-md hover:text-tertiary hover:border-slate-400 md:hidden
-}
-
-.container .navbar .menu {
-    @apply
-    list-none flex flex-col md:gap-x-8 lg:gap-x-10 gap-y-1 w-full transition-all
-    duration-700 md:flex-row cursor-pointer overflow-hidden
-}
-
-.container .navbar .menu .link {
-    @apply
-    hover:text-tertiary text-2xl transition duration-300 md:hover:scale-105
 }
 
 .item {

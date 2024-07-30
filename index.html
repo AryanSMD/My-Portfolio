@@ -9,26 +9,64 @@
 </head>
 <body style="background-image: url('src/assets/images/background.jpg')">
     <!-- wrapper -->
-    <div class="container mb-32" id="about">
         <!-- header -->
-        <div class="navbar" x-data="{ showMenu: false }" @click.outside="showMenu = false">
-            <img class="logo" src="src/assets/images/logo.png" alt="...">
-            <button class="menu-btn" @click="showMenu = !showMenu">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>                     
-            </button>
-            <ul class="menu md:max-h-80" :class="showMenu ? 'max-h-80 mt-8 gap-y-4' : 'max-h-0'">
-                <a id="aboutLink" href="#about" class="link" @click="showMenu = false, clear()">
-                    About</a>
-                <a id="educationLink" href="#education" class="link" @click="showMenu = false, clear()">Education</a>
-                <a id="skillsLink" href="#skills" class="link" @click="showMenu = false, clear()">Skills</a>
-                <a id="experiencesLink" href="#experiences" class="link" @click="showMenu = false, clear()">Experiences</a>
-                <a id="contactLink" href="#contact" class="link" @click="showMenu = false, clear()">Contact</a>
-            </ul>
+        <div class="navbar" x-data="{ showMenu: false }" @click.outside="showMenu = false" id="navbar">
+            <div class="container" id="navbarContainer">
+                <img class="logo" src="src/assets/images/logo.png" alt="...">
+                <button class="menu-btn" @click="showMenu = !showMenu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>                     
+                </button>
+                <ul class="menu md:max-h-80" :class="showMenu ? 'max-h-80 mt-8 gap-y-4' : 'max-h-0'">
+                    <a id="aboutLink" href="#about" class="link" @click="showMenu = false, clear()">
+                        <div class="text link-text">
+                            About
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg link-svg" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                        </svg>
+                    </a>
+                    <a id="educationLink" href="#education" class="link" @click="showMenu = false, clear()">
+                        <div class="text link-text">
+                            Education
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg link-svg" viewBox="0 0 16 16">
+                            <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917z"/>
+                            <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466z"/>
+                        </svg>
+                    </a>
+                    <a id="skillsLink" href="#skills" class="link" @click="showMenu = false, clear()">
+                        <div class="text link-text">
+                            Skills
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg link-svg" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5"/>
+                            <path d="M2.242 2.194a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.28.28 0 0 0-.094.3l.173.569c.078.256-.213.462-.423.3l-.417-.324a.27.27 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.28.28 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.27.27 0 0 0 .259-.194zm0 4a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.28.28 0 0 0-.094.3l.173.569c.078.255-.213.462-.423.3l-.417-.324a.27.27 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.28.28 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.27.27 0 0 0 .259-.194zm0 4a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.28.28 0 0 0-.094.3l.173.569c.078.255-.213.462-.423.3l-.417-.324a.27.27 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.28.28 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.27.27 0 0 0 .259-.194z"/>
+                        </svg>
+                    </a>
+                    <a id="experiencesLink" href="#experiences" class="link" @click="showMenu = false, clear()">
+                        <div class="text link-text">
+                            Experiences
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg link-svg" viewBox="0 0 16 16">
+                            <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+                        </svg>
+                    </a>
+                    <a id="contactLink" href="#contact" class="link" @click="showMenu = false, clear()">
+                        <div class="text link-text">
+                            Contact
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg link-svg" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                        </svg>
+                    </a>
+                </ul>
+            </div>
         </div>
         <!-- /header -->
-
+    <div class="container mb-32" id="about">
         <!-- /content -->
         <div class="content -mt-20 md:mt-0">
             <!-- /about -->
