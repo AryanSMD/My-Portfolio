@@ -618,10 +618,6 @@ video {
   height: 100%;
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
 .max-h-0 {
   max-height: 0px;
 }
@@ -648,10 +644,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-10 {
-  width: 2.5rem;
 }
 
 .\!translate-y-0 {
@@ -890,7 +882,7 @@ body {
 
 @media (min-width: 1024px) {
   .container .content {
-    gap: 100px;
+    gap: 150px;
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
@@ -1293,7 +1285,7 @@ body {
 
 @media (min-width: 1024px) {
   .footer .footer-container .content {
-    gap: 100px;
+    gap: 150px;
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
