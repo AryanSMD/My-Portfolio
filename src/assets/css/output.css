@@ -598,6 +598,10 @@ video {
   margin-top: 2rem;
 }
 
+.mb-28 {
+  margin-bottom: 7rem;
+}
+
 .flex {
   display: flex;
 }
@@ -653,12 +657,6 @@ video {
 
 .translate-y-\[100px\] {
   --tw-translate-y: 100px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-105 {
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -888,7 +886,7 @@ body {
 
 @media (min-width: 1024px) {
   .container .content {
-    gap: 150px;
+    gap: 50px;
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
@@ -1292,7 +1290,7 @@ body {
 
 @media (min-width: 1024px) {
   .footer .footer-container .content {
-    gap: 150px;
+    gap: 50px;
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
@@ -1479,9 +1477,17 @@ body {
   }
 }
 
+.mark {
+  margin-bottom: 200px;
+}
+
 @media (min-width: 768px) {
   .md\:mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:mt-\[-100px\] {
+    margin-top: -100px;
   }
 
   .md\:max-h-80 {
@@ -1490,12 +1496,6 @@ body {
 
   .md\:w-1\/2 {
     width: 50%;
-  }
-
-  .md\:scale-105 {
-    --tw-scale-x: 1.05;
-    --tw-scale-y: 1.05;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .md\:flex-row {
