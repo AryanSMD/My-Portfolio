@@ -1,3 +1,5 @@
+AOS.init();
+
 const navbar = document.getElementById('navbar');
 const linkText = document.getElementsByClassName('link-text');
 const linkSvg = document.getElementsByClassName('link-svg');
@@ -19,13 +21,8 @@ function setStyle(val) {
     }
 }
 
-function setCardStyle(index) {
-    cards[index].classList.add('scale-105');
-}
-
 function removeStyle(val) {
     val.classList.remove('text-fourth');
-    val.classList.remove('md:scale-105');
 }
 
 function removeNavStyle() {
@@ -42,9 +39,6 @@ function clear() {
     removeStyle(education);
     removeStyle(experiences);
     removeStyle(contact);
-    for(let i in cards) {
-        cards[i].classList?.remove('scale-105');
-    }
 }
 
 
@@ -55,23 +49,18 @@ document.onscroll = () => {
         if (scroll < 1) {
             clear();
             removeNavStyle();
-            setCardStyle(0);
         } else if (cards[0].getBoundingClientRect().bottom > 300) {
-            clear();0
+            clear();
             setStyle(about);
-            setCardStyle(0);
         } else if (cards[1].getBoundingClientRect().bottom > 300) {
             clear();
             setStyle(education);
-            setCardStyle(1);
         } else if (cards[2].getBoundingClientRect().bottom > 300) {
             clear();
             setStyle(skills);
-            setCardStyle(2);
         } else if (cards[3].getBoundingClientRect().bottom > 700) {
             clear();
             setStyle(experiences);
-            setCardStyle(3);
         } else if (cards[3].getBoundingClientRect().bottom > 200) {
             clear();
             setStyle(contact);

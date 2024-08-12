@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/assets/css/output.css">
+    <link href="src/assets/css/AOS.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="src/assets/images/icon.png">
     <title>Aryan SMD</title>
 </head>
-<body style="background-image: url('src/assets/images/background.jpg')">
+<body>
     <!-- wrapper -->
         <!-- header -->
         <div class="navbar" x-data="{ showMenu: false }" @click.outside="showMenu = false" id="navbar">
@@ -72,7 +73,7 @@
         <!-- /content -->
         <div class="content -mt-20 md:mt-0">
             <!-- /about -->
-            <div class="card flex flex-col md:flex-row md:items-center scale-105" style="padding: 16px;">
+            <div class="card flex flex-col md:flex-row md:items-center !p-4 scale-105">
                 <div class="image-container">
                     <img class="image" src="src/assets/images/pic.jpg" alt="Loading...">
                 </div>
@@ -93,7 +94,7 @@
 
             <!-- education -->
             <div id="education"></div>
-            <div class="card">
+            <div data-aos="fade-right" class="card">
                 <h1 class="card-title">Education</h1>
                 <a class="text-2xl w-full" href="https://www.linkedin.com/school/razi-university-kermanshah/">
                     <div class="case" style="max-height: none;">
@@ -116,7 +117,7 @@
 
             <!-- skills -->
             <div id="skills"></div>
-            <div class="card">
+            <div data-aos="fade-left" class="card">
                 <h1 class="card-title">Skills</h1>
                 <div class="skills-list">
                     <div class="h-full w-full md:w-1/2">
@@ -223,7 +224,7 @@
 
             <!-- experiences -->
             <div id="experiences"></div>
-            <div class="card">
+            <div data-aos="fade-right" class="card">
                 <h1 class="card-title">Experiences</h1>
                 <div class="case-list">
                     <div class="text-2xl w-full cursor-default">
@@ -327,7 +328,8 @@
     <div id="contact"></div>
     <!-- /footer -->
     
-    <script defer src="src/assets/js/alpinejs3.13.1.min.js"></script>
+    <script src="src/assets/js/AOS.js"></script>
+    <script defer src="src/assets/js/alpinejs.js"></script>
     <script src="src/main.js"></script>
 </body>
 </html>

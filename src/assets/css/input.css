@@ -18,7 +18,7 @@
 
 body {
     @apply
-    bg-fixed bg-cover backdrop-brightness-[40%] text-white
+    bg-[url('../images/background.jpg')] bg-fixed bg-cover backdrop-brightness-[40%] text-white
 }
 
 .navbar {
