@@ -39,13 +39,13 @@ body {
 
 .navbar .container .menu-btn {
     @apply
-    border-2 rounded-md hover:text-tertiary hover:border-slate-400 md:hidden
+    rounded-md hover:text-tertiary md:hidden
 }
 
 .navbar .container .menu {
     @apply
     list-none flex flex-col md:gap-x-8 lg:gap-x-10 gap-y-1 w-full transition-all
-    duration-700 md:flex-row cursor-default overflow-hidden
+    duration-500 md:flex-row cursor-default overflow-hidden
 }
 
 .navbar .container .menu .link {
@@ -66,7 +66,7 @@ body {
 
 .container .content {
     @apply
-    flex flex-col items-center gap-[70px] lg:gap-[50px] lg:py-24 overflow-hidden
+    flex flex-col items-center gap-[20px] lg:gap-[70px] lg:py-24 overflow-hidden
 }
 
 .container .content .card .image-container {
@@ -91,7 +91,7 @@ body {
 
 .container .content .card {
     @apply
-    w-full lg:w-[60%] bg-primary rounded-md p-8 gap-4 overflow-hidden transition-all
+    w-full lg:w-[70%] xl:w-[60%] bg-primary rounded-md p-8 gap-4 overflow-hidden transition-all
     duration-1000 shadow-md shadow-[#0D0D0D]
 }
 
