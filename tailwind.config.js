@@ -7,15 +7,11 @@ module.exports = {
     extend: {
       colors:{
         primary: 'var(--primary)',
-        secondary: 'var(--secondary)',
-        tertiary: 'var(--tertiary)',
-        fourth: 'var(--fourth)',
-        navbarColor: '#101010',
+        text: 'var(--text)',
       }
     },
     container: {
       center: true,
-      padding: '1rem',
     }
   },
   plugins: [],

@@ -24,7 +24,7 @@ body {
 
 .logo {
     @apply
-    absolute left-4 lg:left-20 md:top-2 lg:top-5 text-[2.5rem] flex items-center gap-2 text-primary
+    absolute left-4 lg:left-20 md:top-2 lg:top-5 text-[2.5rem] flex items-center gap-2
 }
 
 .header img {
