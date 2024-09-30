@@ -4,10 +4,8 @@
 
 
 :root {
-    --primary: #252525;
-    --secondary: #414141;
-    --tertiary: #525252;
-    --fourth: #00FFAB;
+    --primary: #1CFEFC;
+    --text: #F4F4F4;
 }
 
 
@@ -17,148 +15,111 @@
 }
 
 body {
+    font-family: 'Kanit';
     @apply
-    bg-[url('../images/background.jpg')] bg-fixed bg-cover backdrop-brightness-[40%] text-white
+    w-screen h-screen text-[1.125rem] bg-black bg-[url('../images/BG2.jpg')] md:bg-[url('../images/BG3.jpg')]
+    lg:bg-[url('../images/BG.jpg')] bg-fixed bg-cover text-text cursor-default overflow-x-hidden
+    backdrop-brightness-[80%]
 }
 
-.navbar {
+.logo {
     @apply
-    sticky w-full top-0 bg-opacity-90 md:bg-opacity-0 mb-[100px] py-4 bg-navbarColor z-50
-    transition-colors duration-300 overflow-hidden
+    absolute left-4 lg:left-20 md:top-2 lg:top-5 text-[2.5rem] flex items-center gap-2 text-primary
 }
 
-.navbar .container {
+.header img {
     @apply
-    flex flex-wrap md:flex-nowrap md:gap-x-8 items-center justify-between
+    h-full w-[150px]
 }
 
-.navbar .container .logo {
+.sidebar {
     @apply
-    text-fourth text-3xl overflow-visible md:mr-4 cursor-default w-[100px] h-[40px]
+    w-full lg:w-[70px] lg:h-screen flex flex-col lg:flex-row items-end lg:items-center justify-center overflow-hidden p-2 fixed 
+    right-0 lg:left-0 top-[2px] lg:top-0
 }
 
-.navbar .container .menu-btn {
+.sidebar .menu-icon {
     @apply
-    rounded-md hover:text-tertiary md:hidden
+    w-10 aspect-square lg:hidden transition-all duration-300 hover:text-primary cursor-pointer
 }
 
-.navbar .container .menu {
+.sidebar .menu {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: all .7s;
     @apply
-    list-none flex flex-col md:gap-x-8 lg:gap-x-10 gap-y-1 w-full transition-all
-    duration-500 md:flex-row cursor-default overflow-hidden
+    w-full grid-cols-1 bg-black bg-opacity-80 mt-6 lg:mt-0
+}
+.sidebar .menu {
+    &.show {
+        grid-template-rows: 1fr;
+    }
 }
 
-.navbar .container .menu .link {
-    @apply
-    text-xl flex flex-col items-center relative hover:text-fourth
-    transition-all duration-300
+@media only screen and (min-width: 1024px) {
+    .sidebar .menu {
+        grid-template-rows: 1fr;
+    }
 }
 
-.navbar .container .menu .link .text {
-    @apply
-    transition-transform duration-300
+.sidebar .menu > div {
+    overflow: hidden;
 }
 
-.navbar .container .menu .link .svg {
+.sidebar .menu .item {
     @apply
-    w-[25px] h-[25px] translate-y-[-100px] absolute hidden md:block transition-transform duration-300
+    w-full flex justify-center items-center cursor-pointer transition-all duration-300 text-text hover:text-primary
+    p-4 gap-2
 }
 
-.container .content {
+.sidebar .menu .item .text {
     @apply
-    flex flex-col items-center gap-[20px] lg:gap-[70px] lg:py-24 overflow-hidden
+    lg:hidden
 }
 
-.container .content .card .image-container {
+.sidebar .menu .item .svg {
     @apply
-    w-full h-1/2 flex justify-center items-center md:w-1/2 md:h-full
+    w-6 lg:h-full aspect-square
 }
 
-.container .content .card .image-container .image {
+.scroll-down {
+    animation: scroll 1s infinite alternate;
     @apply
-    w-auto h-full rounded-md md:w-auto md:h-[300px] lg:w-[400px] lg:h-auto lg:rounded-full
+    fixed right-[-50px] bottom-[80px] flex items-center gap-1 rotate-90 cursor-pointer
 }
 
-.item {
-    @apply
-    flex justify-center items-center md:text-xl cursor-default gap-2
+@keyframes scroll {
+    100% {
+        @apply
+        opacity-20
+    }
 }
 
-.footer .footer-container .animat {
+.container {
     @apply
-    transition duration-300 hover:scale-110
+    w-full
 }
 
-.container .content .card {
+.container .title {
     @apply
-    w-full lg:w-[70%] xl:w-[60%] bg-primary rounded-md p-8 gap-4 overflow-hidden transition-all
-    duration-1000 shadow-md shadow-[#0D0D0D]
+    w-full h-screen flex justify-center lg:justify-end lg:items-center text-center font-medium
 }
 
-.container .content .card .card-title {
+.container .title .top {
     @apply
-    text-3xl font-bold italic mb-8 text-fourth cursor-default
+    w-full text-[3rem] md:text-[5rem] xl:text-[6rem] 2xl:text-[9rem] mt-[100px] lg:mt-0
 }
 
-.container .content .card .skills-list {
+.container .title .bot {
+    animation: test 1s infinite alternate;
     @apply
-    flex flex-col items-start md:flex-row md:gap-20
+    w-full text-[2rem] md:text-[3rem] xl:text-[3rem] 2xl:text-[5rem] tracking-[.7rem] md:tracking-[1.3rem] 
+    lg:tracking-[1.7rem] xl:tracking-[2rem] 2xl:tracking-[2.7rem] ml-1 md:ml-2 lg:ml-4 mt-[-20px] italic
 }
 
-.container .content .card .skills-list .li {
-    @apply
-    mb-8 md:mb-2 text-2xl italic justify-start flex flex-col
-}
-
-.container .content .card .skills-list .li .box {
-    @apply
-    w-full h-auto flex items-center
-}
-
-.container .content .card .skills-list .li .box .range {
-    @apply
-    w-full h-[2px] bg-secondary rounded-lg overflow-hidden flex justify-start
-}
-
-.container .content .card .skills-list .li .box .range .rate {
-    @apply
-    h-full bg-white rounded-r-md
-}
-
-.container .content .card .case-list {
-    @apply
-    flex flex-col items-center gap-10 mb-10
-}
-
-.container .content .card .case {
-    @apply
-    w-full flex flex-col bg-secondary p-4 rounded-md gap-2
-    hover:bg-tertiary shadow-sm shadow-[#0D0D0D] transition-all duration-300
-}
-
-.container .content .card .case .title {
-    @apply
-    font-bold italic flex items-center gap-2
-}
-
-.container .content .card .case .text {
-    @apply
-    overflow-auto text-slate-200
-}
-
-.footer {
-    @apply
-    flex flex-col justify-center gap-2 lg:gap-6 bottom-0 w-full h-auto lg:h-[130px]
-    bg-navbarColor overflow-hidden z-50
-}
-
-.footer .footer-container {
-    @apply
-    container flex flex-col lg:flex-row lg:items-center justify-between items-baseline
-    py-2 overflow-hidden
-}
-
-.mark {
-    @apply
-    mb-[200px]
+@keyframes test {
+    100% {
+        @apply
+        text-primary
+    }
 }

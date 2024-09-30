@@ -3,322 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/assets/css/output.css">
+    <link href="src/assets/css/Font1.css" rel="stylesheet">
     <link href="src/assets/css/AOS.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="src/assets/images/icon.png">
-    <title>Aryan SMD</title>
+    <link rel="stylesheet" href="src/assets/css/output.css">
+    <title>AryanSMD</title>
 </head>
 <body>
-    <!-- wrapper -->
-    <!-- header -->
-    <div class="navbar" x-data="{ showMenu: false }" @click.outside="showMenu = false" id="navbar">
-        <div class="container" id="navbarContainer">
-            <img class="logo" src="src/assets/images/logo.png" alt="...">
-            <button class="menu-btn" @click="showMenu = !showMenu">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>                     
-            </button>
-            <ul class="menu md:h-auto" :class="showMenu ? 'h-[160px] gap-y-4' : 'h-0'">
-                <a id="aboutLink" href="#about" class="link" @click="showMenu = false, clear()">
-                    <div class="text link-text">
-                        About
-                    </div>
+    <div class="logo">
+        <!-- <img src="src/assets/images/logo.png" alt=""> -->
+        Aryan SMD
+    </div>
+    <div class="sidebar" x-data="{ showMenu : false }">
+        <div class="menu-icon" x-on:click="showMenu = !showMenu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-full aspect-square" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+        </div>
+        <div class="menu" :class="showMenu && 'show'">
+            <div>
+                <div class="item">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg link-svg" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                         <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
                     </svg>
-                </a>
-                <a id="educationLink" href="#education" class="link" @click="showMenu = false, clear()">
-                    <div class="text link-text">
-                        Education
-                    </div>
+                    <div class="text">About</div>
+                </div>
+                <div class="item">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg link-svg" viewBox="0 0 16 16">
                         <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917z"/>
                         <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466z"/>
                     </svg>
-                </a>
-                <a id="skillsLink" href="#skills" class="link" @click="showMenu = false, clear()">
-                    <div class="text link-text">
-                        Skills
-                    </div>
+                    <div class="text">Education</div>
+                </div>
+                <div class="item">
                     <svg class="svg link-svg" viewBox="0 -28 512.0001 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                         <path d="m317.480469 219.5625c3.164062 0 6.292969-.988281 8.917969-2.894531 4.050781-2.941407 6.386718-7.691407 6.246093-12.695313l-1.667969-59.839844 36.523438-47.429687c3.054688-3.964844 3.957031-9.183594 2.410156-13.941406-1.546875-4.761719-5.34375-8.453125-10.144531-9.867188l-57.425781-16.90625-33.824219-49.390625c-2.828125-4.128906-7.511719-6.597656-12.515625-6.597656s-9.6875 2.46875-12.515625 6.597656l-33.820313 49.390625-57.429687 16.90625c-4.800781 1.414063-8.59375 5.105469-10.140625 9.867188-1.546875 4.757812-.648438 9.976562 2.40625 13.941406l36.523438 47.429687-1.667969 59.839844c-.140625 5.003906 2.195312 9.753906 6.246093 12.695313 4.050782 2.941406 9.289063 3.695312 14.003907 2.015625l56.394531-20.078125 56.398438 20.078125c1.652343.589844 3.371093.878906 5.082031.878906zm0 0"/>
                         <path d="m218.417969 309.289062-57.425781-16.902343-33.824219-49.390625c-2.828125-4.132813-7.511719-6.601563-12.515625-6.601563s-9.6875 2.46875-12.515625 6.601563l-33.824219 49.390625-57.425781 16.902343c-4.800781 1.414063-8.597657 5.105469-10.144531 9.867188-1.546876 4.757812-.6445318 9.976562 2.40625 13.941406l36.523437 47.429688-1.667969 59.839844c-.136718 5.003906 2.199219 9.753906 6.246094 12.695312 4.050781 2.941406 9.289062 3.695312 14.007812 2.019531l56.394532-20.078125 56.394531 20.078125c1.65625.589844 3.375.878907 5.085937.878907 3.164063 0 6.292969-.992188 8.917969-2.898438 4.050781-2.941406 6.386719-7.691406 6.246094-12.695312l-1.667969-59.839844 36.523438-47.429688c3.054687-3.964844 3.957031-9.183594 2.410156-13.941406-1.546875-4.761719-5.34375-8.453125-10.144531-9.867188zm0 0"/>
                         <path d="m511.257812 319.15625c-1.546874-4.761719-5.34375-8.453125-10.144531-9.867188l-57.425781-16.902343-33.820312-49.390625c-2.828126-4.132813-7.511719-6.601563-12.519532-6.601563-5.003906 0-9.6875 2.46875-12.515625 6.601563l-33.820312 49.390625-57.425781 16.902343c-4.804688 1.414063-8.597657 5.105469-10.144532 9.867188-1.546875 4.757812-.644531 9.976562 2.40625 13.941406l36.523438 47.429688-1.667969 59.839844c-.140625 5.003906 2.199219 9.753906 6.246094 12.695312 4.050781 2.941406 9.289062 3.695312 14.007812 2.019531l56.394531-20.078125 56.394532 20.078125c1.65625.589844 3.375.878907 5.085937.878907 3.160157 0 6.289063-.992188 8.917969-2.898438 4.050781-2.941406 6.386719-7.691406 6.246094-12.695312l-1.667969-59.839844 36.523437-47.429688c3.050782-3.964844 3.953126-9.183594 2.40625-13.941406zm0 0"/>
                     </svg>
-                </a>
-                <a id="experiencesLink" href="#experiences" class="link" @click="showMenu = false, clear()">
-                    <div class="text link-text">
-                        Experiences
-                    </div>
+                    <div class="text">Skills</div>
+                </div>
+                <div class="item">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg link-svg" viewBox="0 0 16 16">
                         <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"/>
                         <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"/>
                     </svg>
-                </a>
-                <a id="contactLink" href="#contact" class="link" @click="showMenu = false, clear()">
-                    <div class="text link-text">
-                        Contact
-                    </div>
+                    <div class="text">Experiences</div>
+                </div>
+                <div class="item">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg link-svg" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
                     </svg>
-                </a>
-            </ul>
+                    <div class="text">Contact</div>
+                </div>    
+            </div>
         </div>
     </div>
-    <!-- /header -->
-    <div class="container mb-32" id="about">
-        <!-- /content -->
-        <div class="content -mt-20 md:mt-0">
-            <!-- /about -->
-            <div class="card flex flex-col md:flex-row md:items-center !p-4 lg:scale-105">
-                <div class="image-container">
-                    <img class="image" src="src/assets/images/pic.jpg" alt="Loading...">
-                </div>
-                <div class="flex flex-col h-1/6 md:w-1/2 lg:gap-12 cursor-default">
-                    <h1 class="text-2xl mb-2 lg:h-auto xl:text-3xl text-center font-bold">
-                        Hi, i'm <span class="italic text-fourth">Aryan SMD</span>
-                    </h1>
-                    <div class="flex-col lg:h-5/6 overflow-auto">
-                        <p class="text-xl text-center">
-                            A <span class="italic font-bold">Front-End Developer</span> who started programming
-                            professionally in 2021. im very interested in front-end and its technologies,
-                            specially <span class="font-bold italic">Nuxt.js(Vue.js)</span>. I  have  experience 
-                            of several projects for RUDN university of Moscow.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- /about -->
-
-            <!-- education -->
-            <div class="mark" id="education"></div>
-            <div data-aos="fade-right" class="card">
-                <h1 class="card-title">Education</h1>
-                <a class="text-2xl w-full" href="https://www.linkedin.com/school/razi-university-kermanshah/">
-                    <div class="case" style="max-height: none;">
-                        <h1 class="title">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
-                                <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z"/>
-                            </svg>
-                            Razi University
-                        </h1>
-                        <p class="text">
-                            Electrical engineering 2019-2023
-                        </p>
-                        <p class="text">
-                            Kermanshah, Kermanshah Province, Iran
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <!-- /education -->
-
-            <!-- skills -->
-            <div class="mark" id="skills"></div>
-            <div data-aos="fade-left" class="card">
-                <h1 class="card-title">Skills</h1>
-                <div class="skills-list">
-                    <div class="h-full w-full md:w-1/2">
-                        <ul>
-                            <li class="item li h-[64px]">
-                                <h1 class="self-start">Vue.js</h1>
-                                <div class="box">
-                                    <div class="range">
-                                        <div class="w-[100%] rate"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item li h-[64px]">
-                                <h1 class="self-start">Git</h1>
-                                <div class="box">
-                                    <div class="range">
-                                        <div class="w-[100%] rate"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item li h-[64px]">
-                                <h1 class="self-start">JavaScript</h1>
-                                <div class="box">
-                                    <div class="range">
-                                        <div class="w-[100%] rate"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item li h-[64px]">
-                                <h1 class="self-start">HTML</h1>
-                                <div class="box">
-                                    <div class="range">
-                                        <div class="w-[100%] rate"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item li h-[64px]">
-                                <h1 class="self-start">Node.js</h1>
-                                <div class="box">
-                                    <div class="range">
-                                        <div class="w-[100%] rate"></div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>                        
-                    </div>
-                    <div class="h-full w-full md:w-1/2">
-                        <ul>
-                            <li class="item li h-[64px]">
-                                <h1 class="self-start">Nuxt.js</h1>
-                                <div class="box">
-                                    <div class="range">
-                                        <div class="w-[100%] rate"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item li h-[64px]">
-                                <h1 class="self-start">TailwindCss</h1>
-                                <div class="box">
-                                    <div class="range">
-                                        <div class="w-[100%] rate"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item li h-[64px]">
-                                <h1 class="self-start">TypeScript</h1>
-                                <div class="box">
-                                    <div class="range">
-                                        <div class="w-[100%] rate"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item li h-[64px]">
-                                <h1 class="self-start">CSS</h1>
-                                <div class="box">
-                                    <div class="range">
-                                        <div class="w-[100%] rate"></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item li h-[64px]">
-                                <h1 class="self-start">Front-End Development</h1>
-                                <div class="box">
-                                    <div class="range">
-                                        <div class="w-[100%] rate"></div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>                            
-                    </div>
-                </div>
-            </div>
-            <!-- /skills -->
-
-            <!-- experiences -->
-            <div class="mark" id="experiences"></div>
-            <div data-aos="fade-right" class="card">
-                <h1 class="card-title">Experiences</h1>
-                <div class="case-list">
-                    <div class="text-2xl w-full cursor-default">
-                        <div class="case">
-                            <h1 class="title">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
-                                </svg>
-                                ACT
-                            </h1>
-                            <p class="text">
-                                An web application for taking tests for RUDN university of Moscow.
-                            </p>
-                            <p class="text">
-                                Technologies: Vue3, Vuex, Vuelidate, JQuery, Axios, Git.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="text-2xl w-full cursor-default">
-                        <div class="case">
-                            <h1 class="title">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
-                                </svg>
-                                ACT-ADMIN
-                            </h1>
-                            <p class="text">
-                                ACT's admin web application for RUDN university of Moscow.
-                            </p>
-                            <p class="text">
-                                Technologies: Vue3, Vuex, Vuelidate, ECharts, JQuery, Axios, Git.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="text-2xl w-full cursor-default">
-                        <div class="case">
-                            <h1 class="title">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
-                                </svg>
-                                ROSLOVO
-                            </h1>
-                            <p class="text">
-                                Admin Panel for Roslovo a Language Learning App for RUDN university of
-                                Moscow.
-                            </p>
-                            <p class="text">
-                                Technologies: Nuxt3, Pinia, TypeScript, VeeValidate, Yup, TailwindCss, ECharts, JQuery, Axios, Git
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /experiences -->
-        </div>
-        <!-- /content -->
+    <div class="scroll-down">
+        SCROLL DOWN 
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 aspect-square" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+        </svg>
     </div>
-    <!-- /wrapper -->
-
-    <!-- footer -->
-    <div class="footer">
-        <div class="footer-container">
-            <div class="item animat">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
-                    <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"/>
-                    <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"/>
-                </svg>
-                <h2 class="lg:-mt-1">
-                    aryansmd79@gmail.com
-                </h2>
-            </div>
-            <div class="item animat">
-                <svg xmlns="http://www.w3.org/2000/svg"fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
-                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                </svg>
-                <h2 class="lg:-mt-1">
-                    github.com/AryanSMD
-                </h2>
-            </div>
-            <div class="item animat">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
-                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-                </svg>
-                <h2 class="lg:-mt-1">
-                    www.linkedin.com/in/aryan-smd
-                </h2>
-            </div>
-            <div class="item animat">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
-                </svg>
-                <h2 class="lg:-mt-1">
-                    @AryanSMD79
-                </h2>
+    <div class="container">
+        <div class="title">
+            <div>
+                <p class="top">FRONT_END</p>
+                <p class="bot">DEVELOPER</p>
             </div>
         </div>
-        <div class="w-full text-center cursor-default">
-            © Copyright. Design And Developed By <span class="font-bold">AryanSMD</span>
-        </div>
+        
     </div>
-    <div id="contact"></div>
-    <!-- /footer -->
-    
+
+
+
+
     <script src="src/assets/js/AOS.js"></script>
     <script defer src="src/assets/js/alpinejs.js"></script>
     <script src="src/main.js"></script>
