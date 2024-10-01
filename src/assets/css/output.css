@@ -635,6 +635,7 @@ body {
 
 @media (min-width: 1024px) {
   .logo {
+    background-color: transparent;
     padding-left: 5rem;
     padding-top: 1.25rem;
   }
@@ -753,10 +754,10 @@ body {
 }
 
 .scroll-down {
-  animation: scroll 1s infinite alternate;
-  position: fixed;
+  animation: scroll 2s infinite alternate;
+  position: absolute;
   right: -50px;
-  bottom: 90px;
+  bottom: 100px;
   z-index: 100;
   display: flex;
   --tw-rotate: 90deg;
@@ -772,9 +773,16 @@ body {
   }
 }
 
-.page1 {
-  height: 100vh;
+.container {
   width: 100%;
+  overflow: hidden;
+}
+
+.page1 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
   background-image: url('../images/BG2.jpg');
   background-size: cover;
   background-attachment: fixed;
@@ -796,11 +804,6 @@ body {
   }
 }
 
-.container {
-  width: 100%;
-  overflow: hidden;
-}
-
 .frontend {
   position: absolute;
   top: 80px;
@@ -809,9 +812,6 @@ body {
   width: 100%;
   text-align: center;
   font-size: 3rem;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 1000ms;
 }
 
 @media (min-width: 768px) {
@@ -844,7 +844,7 @@ body {
 }
 
 .developer {
-  animation: test 1s infinite alternate;
+  animation: developer 1s infinite alternate;
   position: absolute;
   top: 140px;
   left: 0px;
@@ -854,10 +854,7 @@ body {
   text-align: center;
   font-size: 2rem;
   font-style: italic;
-  letter-spacing: .7rem;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 1000ms
+  letter-spacing: .7rem
 }
 
 @media (min-width: 768px) {
@@ -897,7 +894,7 @@ body {
   }
 }
 
-@keyframes test {
+@keyframes developer {
   100% {
     color: var(--primary);
   }
@@ -910,7 +907,6 @@ body {
   width: 100%;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.9;
-  padding: 0.5rem;
   text-align: center;
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: .7rem;
@@ -927,4 +923,3 @@ body {
     font-size: 1rem;
   }
 }
-
