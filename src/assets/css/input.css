@@ -22,13 +22,14 @@ body {
 
 .logo {
     @apply
-    fixed left-4 lg:left-20 md:top-2 lg:top-5 text-[2.5rem] flex items-center gap-2 z-[100]
+    w-full fixed top-0 left-0 pl-4 lg:pl-20 md:pt-2 lg:pt-5 text-[2.5rem] flex items-center gap-2 z-[100]
+    bg-black bg-opacity-70
 }
 
 .sidebar {
     @apply
     w-full lg:w-[70px] lg:h-screen flex flex-col lg:flex-row items-end lg:items-center justify-center 
-    overflow-hidden p-2 fixed right-0 lg:left-0 top-[2px] lg:top-0 z-[100]
+    overflow-hidden p-2 fixed right-0 lg:left-0 top-[2px] lg:top-0 z-[101]
 }
 
 .sidebar .menu-icon {
@@ -101,7 +102,7 @@ body {
 
 .frontend {
     @apply
-    w-full text-center lg:w-auto text-[3rem] md:text-[5rem] xl:text-[7rem] 2xl:text-[9rem] z-[100]
+    w-full text-center lg:w-auto text-[3rem] md:text-[5rem] xl:text-[7rem] 2xl:text-[9rem] z-[99]
     top-[80px] md:top-[60px] lg:top-[300px] 2xl:top-[350px] right-0 absolute
 }
 
@@ -109,7 +110,7 @@ body {
     animation: test 1s infinite alternate;
     @apply
     w-full text-center lg:w-auto text-[2rem] md:text-[3rem] xl:text-[4rem] 2xl:text-[5rem] tracking-[.7rem] 
-    md:tracking-[1.3rem] lg:tracking-[1.4rem] xl:tracking-[2rem] 2xl:tracking-[2.7rem] italic z-[100] mr-[-5px] 
+    md:tracking-[1.3rem] lg:tracking-[1.4rem] xl:tracking-[2rem] 2xl:tracking-[2.7rem] italic z-[99] mr-[-5px] 
     md:mr-[-10px] lg:mr-[-20px] xl:mr-[-30px] absolute top-[140px] md:top-[150px] lg:top-[390px] xl:top-[420px] 
     2xl:top-[520px] right-0
 }
