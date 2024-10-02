@@ -16,7 +16,7 @@ html {
 
 ::-webkit-scrollbar {
     @apply
-    w-[5px]
+    w-[3px]
 }
 ::-webkit-scrollbar-track {
     @apply
@@ -119,7 +119,7 @@ body {
 
 .page {
     @apply
-    w-full h-screen overflow-hidden relative
+    w-full h-screen overflow-hidden relative grid items-start lg:items-center
 }
 
 .home {
@@ -130,16 +130,16 @@ body {
 
 .frontend {
     @apply
-    w-full text-center lg:w-auto text-[3rem] md:text-[5rem] xl:text-[7rem] 2xl:text-[9rem] z-[99]
-    top-[80px] md:top-[60px] lg:top-[300px] 2xl:top-[350px] left-0 lg:right-40 lg:left-auto absolute
+    w-full text-center lg:w-auto text-[3rem] sm:text-[5rem] xl:text-[7rem] 2xl:text-[9rem] z-[99]
+    left-0 lg:right-40 lg:left-auto absolute mt-[100px] md:mt-[60px] lg:mt-0
 }
 
 .developer {
     @apply
-    w-full text-center lg:w-auto text-[2rem] md:text-[3rem] xl:text-[4rem] 2xl:text-[5rem] tracking-[.7rem] 
-    md:tracking-[1.3rem] lg:tracking-[1.4rem] xl:tracking-[2rem] 2xl:tracking-[2.7rem] italic z-[99] lg:mr-[-20px] 
-    xl:mr-[-30px] absolute top-[140px] md:top-[150px] lg:top-[390px] xl:top-[420px] 2xl:top-[520px]
-    left-0 lg:right-40 lg:left-auto
+    w-full text-center lg:w-auto text-[2rem] sm:text-[3rem] xl:text-[4rem] 2xl:text-[5rem] tracking-[.7rem] 
+    sm:tracking-[1.3rem] lg:tracking-[1.4rem] xl:tracking-[2rem] 2xl:tracking-[2.7rem] italic z-[99] ml-[4px] 
+    lg:mr-[-20px] xl:mr-[-30px] absolute left-0 lg:right-40 lg:left-auto mt-[150px] sm:mt-[190px] md:mt-[150px] 
+    2xl:mt-[240px]
 }
 
 #one {
@@ -184,21 +184,45 @@ body {
 
 .modal {
     @apply
-    fixed left-0 top-0 w-screen h-screen bg-black bg-opacity-40 z-[110] flex justify-center items-center
+    fixed left-0 top-0 w-screen h-screen bg-black bg-opacity-60 z-[110] flex justify-center items-center
     transition-all duration-700 scale-0 opacity-0
 }
 
 .modal .contact {
     @apply
-    relative bg-black w-2/3 h-2/3 rounded-md px-4 border-[1px] border-primary border-dashed
+    relative bg-black w-[90%] lg:w-[60%] rounded-md px-4 border-[1px] border-text border-dashed
 }
 
 .modal .contact .close {
     @apply
-    absolute top-2 right-1 w-8 aspect-square cursor-pointer
+    absolute top-[6px] md:top-[14px] right-1 w-8 aspect-square cursor-pointer
 }
 
 .modal .contact .header {
     @apply
-    text-[2.5rem]
+    text-[1.8rem] md:text-[3rem]
+}
+
+.modal .contact .contact-ways {
+    @apply
+    w-full grid grid-cols-1 md:grid-cols-2 justify-center items-center my-4 mb-6 gap-5
+}
+
+.modal .contact .contact-ways .item {
+    @apply
+    w-full flex items-center transition-colors duration-300 gap-5 rounded-md text-text p-2
+}
+.modal .contact .contact-ways .item:hover {
+    @apply
+    text-primary
+}
+
+.modal .contact .contact-ways .item .svg {
+    @apply
+    w-[70px] md:w-[90px] aspect-square
+}
+
+.modal .contact .contact-ways .item .text {
+    @apply
+    w-full text-[2rem] md:text-[2.5rem]
 }
