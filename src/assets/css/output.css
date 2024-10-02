@@ -544,40 +544,20 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
+.right-\[-18px\] {
+  right: -18px;
 }
 
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
+.right-\[-20px\] {
+  right: -20px;
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
+.right-\[-37px\] {
+  right: -37px;
 }
 
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
+.right-\[-43px\] {
+  right: -43px;
 }
 
 .aspect-square {
@@ -593,8 +573,26 @@ video {
 }
 
 :root {
-  --primary: #1CFEFC;
+  /* --primary: #1CFEFC; */
+  --primary: #c026d3;
   --text: #F4F4F4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.375rem;
+  background-color: var(--text);
 }
 
 * {
@@ -609,6 +607,7 @@ body {
   overflow-x: hidden;
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  font-size: 1.125rem;
   color: var(--text)
 }
 
@@ -756,15 +755,13 @@ body {
 .scroll-down {
   animation: scroll 2s infinite alternate;
   position: absolute;
-  right: -50px;
-  bottom: 100px;
-  z-index: 100;
+  bottom: 70px;
+  z-index: 99;
   display: flex;
   --tw-rotate: 90deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   cursor: pointer;
-  align-items: center;
-  gap: 0.25rem
+  align-items: center
 }
 
 @keyframes scroll {
@@ -773,33 +770,56 @@ body {
   }
 }
 
+.footer {
+  position: fixed;
+  bottom: 0px;
+  z-index: 100;
+  width: 100%;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.9;
+  text-align: center;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: .7rem;
+}
+
+@media (min-width: 320px) {
+  .footer {
+    font-size: .8rem;
+  }
+}
+
+@media (min-width: 400px) {
+  .footer {
+    font-size: 1rem;
+  }
+}
+
 .container {
   width: 100%;
   overflow: hidden;
 }
 
-.page1 {
+.page {
   position: relative;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
+}
+
+.home {
   background-image: url('../images/BG2.jpg');
   background-size: cover;
   background-attachment: fixed;
-  font-size: 1.125rem;
-  --tw-backdrop-brightness: brightness(80%);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 @media (min-width: 768px) {
-  .page1 {
+  .home {
     background-image: url('../images/BG3.jpg');
   }
 }
 
 @media (min-width: 1024px) {
-  .page1 {
+  .home {
     background-image: url('../images/BG.jpg');
   }
 }
@@ -844,23 +864,20 @@ body {
 }
 
 .developer {
-  animation: developer 1s infinite alternate;
   position: absolute;
   top: 140px;
   left: 0px;
   z-index: 99;
-  margin-right: -5px;
   width: 100%;
   text-align: center;
   font-size: 2rem;
   font-style: italic;
-  letter-spacing: .7rem
+  letter-spacing: .7rem;
 }
 
 @media (min-width: 768px) {
   .developer {
     top: 150px;
-    margin-right: -10px;
     font-size: 3rem;
     letter-spacing: 1.3rem;
   }
@@ -894,32 +911,48 @@ body {
   }
 }
 
+#one {
+  animation: developer 1s infinite alternate;
+}
+
+#two {
+  animation: developer 1s .1s infinite alternate;
+}
+
+#three {
+  animation: developer 1s .2s infinite alternate;
+}
+
+#four {
+  animation: developer 1s .3s infinite alternate;
+}
+
+#five {
+  animation: developer 1s .4s infinite alternate;
+}
+
+#six {
+  animation: developer 1s .5s infinite alternate;
+}
+
+#seven {
+  animation: developer 1s .6s infinite alternate;
+}
+
+#eight {
+  animation: developer 1s .7s infinite alternate;
+}
+
+#nine {
+  animation: developer 1s .8s infinite alternate;
+}
+
 @keyframes developer {
+  55% {
+    color: var(--text);
+  }
+
   100% {
     color: var(--primary);
-  }
-}
-
-.footer {
-  position: fixed;
-  bottom: 0px;
-  z-index: 100;
-  width: 100%;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.9;
-  text-align: center;
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: .7rem;
-}
-
-@media (min-width: 320px) {
-  .footer {
-    font-size: .8rem;
-  }
-}
-
-@media (min-width: 400px) {
-  .footer {
-    font-size: 1rem;
   }
 }
