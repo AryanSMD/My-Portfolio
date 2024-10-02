@@ -47,12 +47,12 @@ body {
 .sidebar {
     @apply
     w-full lg:w-[70px] lg:h-screen flex flex-col lg:flex-row items-end lg:items-center justify-center 
-    overflow-hidden p-2 fixed right-0 lg:left-0 top-[2px] lg:top-0 z-[101]
+    overflow-hidden fixed right-0 lg:left-0 top-[2px] lg:top-0 z-[101]
 }
 
 .sidebar .menu-icon {
     @apply
-    w-10 aspect-square lg:hidden transition-all duration-300 hover:text-primary cursor-pointer
+    w-10 aspect-square lg:hidden transition-all duration-300 hover:text-primary cursor-pointer mr-2 mt-2
 }
 
 .sidebar .menu {
@@ -108,7 +108,7 @@ body {
 
 .footer {
     @apply
-    w-full text-center fixed bottom-0 z-[100] bg-black font-sans bg-opacity-90 text-[.7rem] 
+    w-full text-center fixed bottom-0 z-[111] bg-black font-sans bg-opacity-90 text-[.7rem] 
     min-[320px]:text-[.8rem] min-[400px]:text-[1rem]
 }
 
@@ -178,4 +178,27 @@ body {
         @apply
         text-primary
     }
+}
+
+
+
+.modal {
+    @apply
+    fixed left-0 top-0 w-screen h-screen bg-black bg-opacity-40 z-[110] flex justify-center items-center
+    transition-all duration-700 scale-0 opacity-0
+}
+
+.modal .contact {
+    @apply
+    relative bg-black w-2/3 h-2/3 rounded-md px-4 border-[1px] border-primary border-dashed
+}
+
+.modal .contact .close {
+    @apply
+    absolute top-2 right-1 w-8 aspect-square cursor-pointer
+}
+
+.modal .contact .header {
+    @apply
+    text-[2.5rem]
 }
