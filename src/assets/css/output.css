@@ -875,7 +875,7 @@ body {
 
 @media (min-width: 1024px) {
   .frontend {
-    right: 10rem;
+    right: 3.5rem;
     left: auto;
     margin-top: 0px;
     width: auto;
@@ -884,6 +884,7 @@ body {
 
 @media (min-width: 1280px) {
   .frontend {
+    right: 7rem;
     font-size: 7rem;
   }
 }
@@ -923,7 +924,7 @@ body {
 
 @media (min-width: 1024px) {
   .developer {
-    right: 10rem;
+    right: 3.5rem;
     left: auto;
     margin-right: -20px;
     width: auto;
@@ -933,6 +934,7 @@ body {
 
 @media (min-width: 1280px) {
   .developer {
+    right: 7rem;
     margin-right: -30px;
     font-size: 4rem;
     letter-spacing: 2rem;
