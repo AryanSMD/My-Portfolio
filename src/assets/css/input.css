@@ -41,7 +41,7 @@ body {
 .logo {
     @apply
     w-full fixed top-0 left-0 pl-4 lg:pl-20 md:pt-2 lg:pt-5 text-[2.5rem] flex items-center gap-2 z-[100]
-    bg-black lg:bg-transparent bg-opacity-70
+    bg-black  bg-opacity-90
 }
 
 .sidebar {
@@ -112,20 +112,15 @@ body {
     min-[320px]:text-[.8rem] min-[400px]:text-[1rem]
 }
 
-.container {
-    @apply
-    w-full overflow-hidden
-}
-
 .page {
     @apply
-    w-full h-screen overflow-hidden relative grid items-start lg:items-center
+    w-full h-screen overflow-hidden relative flex items-start lg:items-center
 }
 
 .home {
     @apply
     bg-fixed bg-cover bg-[url('../images/BG2.jpg')] md:bg-[url('../images/BG3.jpg')]
-    lg:bg-[url('../images/BG.jpg')]
+    lg:bg-[url('../images/BG1.jpg')]
 }
 
 .frontend {
@@ -180,7 +175,40 @@ body {
     }
 }
 
+.container {
+    @apply
+    h-full flex flex-col lg:flex-row items-center justify-between lg:gap-10 overflow-hidden px-8 pt-8
+}
 
+.page .container .left,
+.page .container .right {
+    @apply
+    w-full lg:w-1/2 h-1/2 lg:h-full flex flex-col items-center justify-center sm:p-5
+}
+
+.page .container .left img,
+.page .container .right img {
+    @apply
+    w-full sm:w-auto lg:w-full sm:h-full lg:h-auto aspect-square
+}
+
+.page .container .left .title,
+.page .container .right .title {
+    @apply
+    text-[2rem] lg:text-[3rem] xl:text-[3.5rem] lg:mb-10 text-primary mt-5 lg:mt-0
+}
+
+.page .container .left .text,
+.page .container .right .text {
+    @apply
+    sm:text-[1.5rem] xl:text-[1.8rem] 2xl:text-[2rem] text-justify
+}
+
+.page .container .left .text .svg,
+.page .container .right .text .svg {
+    @apply
+    w-4 sm:w-6 lg:w-8 aspect-square text-primary
+}
 
 .modal {
     @apply
