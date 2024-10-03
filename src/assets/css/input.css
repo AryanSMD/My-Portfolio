@@ -46,13 +46,13 @@ body {
 
 .sidebar {
     @apply
-    w-full lg:w-[70px] lg:h-screen flex flex-col lg:flex-row items-end lg:items-center justify-center 
-    overflow-hidden fixed right-0 lg:left-0 top-[2px] lg:top-0 z-[101]
+    w-full sm:w-[70px] sm:h-screen flex flex-col sm:flex-row items-end sm:items-center justify-center 
+    overflow-hidden fixed right-0 sm:left-0 top-[2px] sm:top-0 z-[101]
 }
 
 .sidebar .menu-icon {
     @apply
-    w-10 aspect-square lg:hidden transition-all duration-300 hover:text-primary cursor-pointer mr-2 mt-2
+    w-10 aspect-square sm:hidden transition-all duration-300 hover:text-primary cursor-pointer mr-2 mt-2
 }
 
 .sidebar .menu {
@@ -60,7 +60,7 @@ body {
     grid-template-rows: 0fr;
     transition: all .7s;
     @apply
-    w-full grid-cols-1 bg-black bg-opacity-90 mt-6 lg:mt-0
+    w-full grid-cols-1 bg-black bg-opacity-90 mt-6 sm:mt-0
 }
 .sidebar .menu {
     &.show {
@@ -68,7 +68,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 640px) {
     .sidebar .menu {
         grid-template-rows: 1fr;
     }
@@ -80,13 +80,13 @@ body {
 
 .sidebar .menu .item {
     @apply
-    w-full flex justify-center items-center cursor-pointer transition-all duration-300 text-text hover:text-primary
-    p-4 gap-2
+    w-full flex justify-start sm:justify-center items-center cursor-pointer transition-all duration-300 text-text 
+    hover:text-primary p-4 gap-2
 }
 
 .sidebar .menu .item .text {
     @apply
-    lg:hidden
+    sm:hidden
 }
 
 .sidebar .menu .item .svg {
@@ -138,8 +138,8 @@ body {
     @apply
     w-full text-center lg:w-auto text-[2rem] sm:text-[3rem] xl:text-[4rem] 2xl:text-[5rem] tracking-[.7rem] 
     sm:tracking-[1.3rem] lg:tracking-[1.4rem] xl:tracking-[2rem] 2xl:tracking-[2.7rem] italic z-[99] ml-[4px] 
-    lg:mr-[-20px] xl:mr-[-30px] absolute left-0 lg:right-14 xl:right-28 lg:left-auto mt-[150px] sm:mt-[190px] md:mt-[150px] 
-    2xl:mt-[240px]
+    lg:mr-[-20px] xl:mr-[-30px] absolute left-0 lg:right-14 xl:right-28 lg:left-auto mt-[150px] sm:mt-[190px] 
+    md:mt-[150px] 2xl:mt-[240px]
 }
 
 #one {
@@ -184,13 +184,13 @@ body {
 
 .modal {
     @apply
-    fixed left-0 top-0 w-screen h-screen bg-black bg-opacity-60 z-[110] flex justify-center items-center
-    transition-all duration-700 scale-0 opacity-0
+    fixed left-0 top-0 w-screen h-screen bg-white bg-opacity-10 z-[110] flex justify-center items-center
+    transition-all duration-700 scale-0 opacity-0 backdrop-blur-md
 }
 
 .modal .contact {
     @apply
-    relative bg-black w-[90%] lg:w-[60%] rounded-md px-4 border-[1px] border-text border-dashed
+    relative bg-black w-[90%] lg:w-[60%] rounded-md px-4
 }
 
 .modal .contact .close {
