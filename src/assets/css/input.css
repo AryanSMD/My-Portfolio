@@ -195,7 +195,7 @@ body {
 .page .container .left .title,
 .page .container .right .title {
     @apply
-    text-[2rem] lg:text-[3rem] xl:text-[3.5rem] lg:mb-10 text-primary mt-5 lg:mt-0
+    text-[3rem] lg:text-[4rem] xl:text-[5rem] lg:mb-10 text-primary mt-5 lg:mt-0
 }
 
 .page .container .left .text,
@@ -208,6 +208,22 @@ body {
 .page .container .right .text .svg {
     @apply
     w-4 sm:w-6 lg:w-8 aspect-square text-primary
+}
+
+.page .container .right .skills {
+    @apply
+    w-full h-full grid grid-cols-3 gap-2 rounded-md lg:py-20 mt-[-200px] lg:mt-0
+}
+
+.page .container .right .skills .item {
+    @apply
+    cursor-pointer flex flex-col items-center justify-center hover:scale-[1.05] hover:text-primary
+    transition-all duration-300 rounded-md sm:text-[1.5rem] xl:text-[2rem]
+}
+
+.page .container .right .skills .item .svg {
+    @apply
+    w-12 sm:w-20 xl:w-28 aspect-square
 }
 
 .modal {
