@@ -60,7 +60,7 @@ body {
     grid-template-rows: 0fr;
     transition: all .7s;
     @apply
-    w-full grid-cols-1 bg-black bg-opacity-90 mt-6 sm:mt-0
+    w-full grid-cols-1 bg-black bg-opacity-90 mt-6 sm:mt-0 rounded-md
 }
 .sidebar .menu {
     &.show {
@@ -201,7 +201,7 @@ body {
 .page .container .left .text,
 .page .container .right .text {
     @apply
-    sm:text-[1.5rem] xl:text-[1.8rem] 2xl:text-[2rem] text-justify
+    sm:text-[1.5rem] xl:text-[1.8rem] 2xl:text-[2rem] text-justify lg:pl-5
 }
 
 .page .container .left .text .svg,
