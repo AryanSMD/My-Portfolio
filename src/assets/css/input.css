@@ -6,6 +6,7 @@
 :root {
     /* --primary: #1CFEFC; */
     --primary: #c026d3;
+    --secondary: #6E6E6E;
     --text: #F4F4F4;
 }
 
@@ -195,7 +196,7 @@ body {
 .page .container .left .title,
 .page .container .right .title {
     @apply
-    text-[3rem] lg:text-[4rem] xl:text-[5rem] lg:mb-10 text-primary mt-5 lg:mt-0
+    text-[3rem] lg:text-[4rem] xl:text-[5rem] lg:mb-10 mt-5 lg:mt-0 italic
 }
 
 .page .container .left .text,
@@ -226,6 +227,36 @@ body {
     w-12 sm:w-20 xl:w-28 aspect-square
 }
 
+.page .container .experiences {
+    @apply
+    w-full h-full flex flex-col px-10 py-20 gap-2 xl:gap-4
+}
+.page .container .experiences::-webkit-scrollbar {
+    @apply
+    hidden
+}
+
+.page .container .experiences .item {
+    @apply
+    w-full border-[1px] border-text bg-white bg-opacity-20 rounded-md p-2
+    flex flex-col justify-between
+}
+
+.page .container .experiences .item .title {
+    @apply
+    sm:text-[1.3rem] lg:text-[1.6rem] 2xl:text-[1.8rem] flex justify-between items-center font-medium
+}
+
+.page .container .experiences .item .top {
+    @apply
+    text-[.8rem] xl:text-[1.4rem] text-white text-opacity-70
+}
+
+.page .container .experiences .item .bot {
+    @apply
+    text-white text-opacity-70 text-[.8rem] xl:text-[1.125rem]
+}
+
 .modal {
     @apply
     fixed left-0 top-0 w-screen h-screen bg-white bg-opacity-10 z-[110] flex justify-center items-center
@@ -254,7 +285,7 @@ body {
 
 .modal .contact .contact-ways .item {
     @apply
-    w-full flex items-center transition-colors duration-300 gap-5 rounded-md text-text p-2
+    w-full flex items-center transition-colors duration-100 gap-5 rounded-md text-text p-2
 }
 .modal .contact .contact-ways .item:hover {
     @apply
