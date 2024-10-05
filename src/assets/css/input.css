@@ -216,10 +216,12 @@ body {
 }
 
 .page .container .right .skills .item {
-    box-shadow: 1px 1px 5px var(--primary), -1px -1px 5px var(--primary);
     @apply
     cursor-pointer flex flex-col items-center justify-center hover:scale-[1.05] hover:text-primary
-    transition-all duration-300 rounded-md text-[1rem] sm:text-[1.5rem] xl:text-[2rem] hover:shadow-none
+    transition-all duration-300 rounded-md text-[1rem] sm:text-[1.5rem] xl:text-[2rem]
+}
+.page .container .right .skills .item:hover {
+    box-shadow: 2px 2px 7px var(--primary), -2px -2px 7px var(--primary);
 }
 
 .page .container .right .skills .item .svg {
@@ -250,12 +252,12 @@ body {
 
 .page .container .experiences .item .top {
     @apply
-    text-[.8rem] xl:text-[1.4rem] text-white text-opacity-80
+    text-[.8rem] xl:text-[1.4rem] text-white
 }
 
 .page .container .experiences .item .bot {
     @apply
-    text-white text-opacity-70 text-[.8rem] xl:text-[1.125rem]
+    text-white text-[.8rem] xl:text-[1.125rem]
 }
 
 .modal {
