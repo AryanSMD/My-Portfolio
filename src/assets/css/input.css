@@ -6,7 +6,6 @@
 :root {
     /* --primary: #1CFEFC; */
     --primary: #c026d3;
-    --secondary: #6E6E6E;
     --text: #F4F4F4;
 }
 
@@ -196,7 +195,7 @@ body {
 .page .container .left .title,
 .page .container .right .title {
     @apply
-    text-[3rem] lg:text-[4rem] xl:text-[5rem] lg:mb-10 mt-5 lg:mt-0 italic
+    text-[2.5rem] lg:text-[4rem] xl:text-[5rem] lg:mb-10 mt-5 lg:mt-0 italic
 }
 
 .page .container .left .text,
@@ -213,13 +212,14 @@ body {
 
 .page .container .right .skills {
     @apply
-    w-full h-full grid grid-cols-3 gap-2 rounded-md lg:py-20 mt-[-200px] lg:mt-0
+    w-full h-full grid grid-cols-3 gap-3 rounded-md lg:py-20 mt-[-200px] lg:mt-0
 }
 
 .page .container .right .skills .item {
+    box-shadow: 1px 1px 5px var(--primary), -1px -1px 5px var(--primary);
     @apply
     cursor-pointer flex flex-col items-center justify-center hover:scale-[1.05] hover:text-primary
-    transition-all duration-300 rounded-md sm:text-[1.5rem] xl:text-[2rem]
+    transition-all duration-300 rounded-md text-[1rem] sm:text-[1.5rem] xl:text-[2rem] hover:shadow-none
 }
 
 .page .container .right .skills .item .svg {
@@ -229,7 +229,7 @@ body {
 
 .page .container .experiences {
     @apply
-    w-full h-full flex flex-col px-10 py-20 gap-2 xl:gap-4
+    w-full h-full flex flex-col sm:px-10 py-20 gap-2 xl:gap-4 overflow-y-auto
 }
 .page .container .experiences::-webkit-scrollbar {
     @apply
@@ -238,18 +238,19 @@ body {
 
 .page .container .experiences .item {
     @apply
-    w-full border-[1px] border-text bg-white bg-opacity-20 rounded-md p-2
+    w-full border-[1px] border-primary bg-white bg-opacity-20 rounded-md p-2
     flex flex-col justify-between
 }
 
 .page .container .experiences .item .title {
     @apply
     sm:text-[1.3rem] lg:text-[1.6rem] 2xl:text-[1.8rem] flex justify-between items-center font-medium
+    text-primary
 }
 
 .page .container .experiences .item .top {
     @apply
-    text-[.8rem] xl:text-[1.4rem] text-white text-opacity-70
+    text-[.8rem] xl:text-[1.4rem] text-white text-opacity-80
 }
 
 .page .container .experiences .item .bot {
