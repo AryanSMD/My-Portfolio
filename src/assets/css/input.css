@@ -60,7 +60,7 @@ body {
     grid-template-rows: 0fr;
     transition: all .7s;
     @apply
-    w-full grid-cols-1 bg-black bg-opacity-90 mt-6 sm:mt-0 rounded-md
+    w-full grid-cols-1 bg-black bg-opacity-90 rounded-md mt-[10px] sm:mt-0
 }
 .sidebar .menu {
     &.show {
