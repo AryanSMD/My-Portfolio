@@ -124,18 +124,17 @@ body {
 }
 
 .frontend {
-    text-shadow: 3px 3px 5px var(--primary);
     @apply
-    w-full text-center lg:w-auto text-[3rem] sm:text-[5rem] xl:text-[7rem] 2xl:text-[9rem] z-[99]
+    w-full text-center lg:w-auto text-[3rem] sm:text-[5rem] xl:text-[7rem] min-[1700px]:text-[9rem] z-[99]
     left-0 lg:right-14 xl:right-28 lg:left-auto absolute mt-[100px] md:mt-[60px] lg:mt-0
 }
 
 .developer {
     @apply
-    w-full text-center lg:w-auto text-[2rem] sm:text-[3rem] xl:text-[4rem] 2xl:text-[5rem] tracking-[.7rem] 
-    sm:tracking-[1.3rem] lg:tracking-[1.4rem] xl:tracking-[2rem] 2xl:tracking-[2.7rem] italic z-[99] ml-[4px] 
+    w-full text-center lg:w-auto text-[2rem] sm:text-[3rem] xl:text-[4rem] min-[1700px]:text-[5rem] tracking-[.7rem] 
+    sm:tracking-[1.3rem] lg:tracking-[1.4rem] xl:tracking-[2rem] min-[1700px]:tracking-[2.7rem] italic z-[99] ml-[4px] 
     lg:mr-[-20px] xl:mr-[-30px] absolute left-0 lg:right-14 xl:right-28 lg:left-auto mt-[150px] sm:mt-[190px] 
-    md:mt-[150px] 2xl:mt-[240px]
+    md:mt-[150px] min-[1700px]:mt-[240px]
 }
 
 #one {
@@ -187,10 +186,10 @@ body {
     w-full lg:w-1/2 h-1/2 lg:h-full flex flex-col items-center justify-center sm:p-5
 }
 
-.page .container .left img,
-.page .container .right img {
+.page .container .left .img,
+.page .container .right .img {
     @apply
-    w-full sm:w-auto lg:w-full sm:h-full lg:h-auto aspect-square
+    w-full sm:w-auto lg:w-full sm:h-full lg:h-auto aspect-square 2xl:p-10 min-[1800px]:p-0
 }
 
 .page .container .left .title,
@@ -203,7 +202,7 @@ body {
 .page .container .left .text,
 .page .container .right .text {
     @apply
-    sm:text-[1.5rem] xl:text-[1.8rem] 2xl:text-[2rem] text-justify lg:pl-5
+    sm:text-[1.5rem] xl:text-[1.8rem] 2xl:text-[2rem] text-justify lg:pl-5 2xl:px-8
 }
 
 .page .container .left .text .svg,
@@ -256,17 +255,16 @@ body {
 .page .container .experiences .item .title {
     @apply
     sm:text-[1.3rem] lg:text-[1.6rem] 2xl:text-[1.8rem] flex justify-between items-center font-medium
-    text-primary
 }
 
 .page .container .experiences .item .top {
     @apply
-    text-[.8rem] xl:text-[1.4rem] text-white
+    text-[.8rem] xl:text-[1.4rem] text-white text-opacity-80
 }
 
 .page .container .experiences .item .bot {
     @apply
-    text-white text-[.8rem] xl:text-[1.125rem]
+    text-white text-[.8rem] xl:text-[1.125rem] text-opacity-60
 }
 
 .modal {

@@ -943,14 +943,13 @@ body {
 }
 
 .frontend {
-  text-shadow: 3px 3px 5px var(--primary);
   position: absolute;
   left: 0px;
   z-index: 99;
   margin-top: 100px;
   width: 100%;
   text-align: center;
-  font-size: 3rem
+  font-size: 3rem;
 }
 
 @media (min-width: 640px) {
@@ -981,7 +980,7 @@ body {
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1700px) {
   .frontend {
     font-size: 9rem;
   }
@@ -1033,7 +1032,7 @@ body {
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1700px) {
   .developer {
     margin-top: 240px;
     font-size: 5rem;
@@ -1131,25 +1130,39 @@ body {
   }
 }
 
-.page .container .left img,
-.page .container .right img {
+.page .container .left .img,
+.page .container .right .img {
   aspect-ratio: 1 / 1;
   width: 100%;
 }
 
 @media (min-width: 640px) {
-  .page .container .left img,
-.page .container .right img {
+  .page .container .left .img,
+.page .container .right .img {
     height: 100%;
     width: auto;
   }
 }
 
 @media (min-width: 1024px) {
-  .page .container .left img,
-.page .container .right img {
+  .page .container .left .img,
+.page .container .right .img {
     height: auto;
     width: 100%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .page .container .left .img,
+.page .container .right .img {
+    padding: 2.5rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .page .container .left .img,
+.page .container .right .img {
+    padding: 0px;
   }
 }
 
@@ -1206,6 +1219,8 @@ body {
 @media (min-width: 1536px) {
   .page .container .left .text,
 .page .container .right .text {
+    padding-left: 2rem;
+    padding-right: 2rem;
     font-size: 2rem;
   }
 }
@@ -1375,7 +1390,6 @@ body {
   align-items: center;
   justify-content: space-between;
   font-weight: 500;
-  color: var(--primary);
 }
 
 @media (min-width: 640px) {
@@ -1398,8 +1412,8 @@ body {
 
 .page .container .experiences .item .top {
   font-size: .8rem;
-  --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-text-opacity: 0.8;
 }
 
 @media (min-width: 1280px) {
@@ -1410,8 +1424,8 @@ body {
 
 .page .container .experiences .item .bot {
   font-size: .8rem;
-  --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-text-opacity: 0.6;
 }
 
 @media (min-width: 1280px) {
