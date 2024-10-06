@@ -124,7 +124,7 @@ body {
 }
 
 .frontend {
-    text-shadow: 5px 5px 5px #444;
+    text-shadow: 3px 3px 5px #444;
     @apply
     w-full text-center lg:w-auto text-[3rem] sm:text-[5rem] xl:text-[7rem] min-[1700px]:text-[9rem] z-[99]
     left-0 lg:right-14 xl:right-28 lg:left-auto absolute mt-[100px] md:mt-[60px] lg:mt-0
