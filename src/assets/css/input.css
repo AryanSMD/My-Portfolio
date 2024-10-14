@@ -130,7 +130,7 @@ body {
 
 .home {
     @apply
-    bg-fixed bg-cover bg-[url('../images/BG2.jpg')] md:bg-[url('../images/BG3.jpg')]
+    bg-fixed bg-cover bg-[url('../images/BG2.jpg')] sm:bg-[url('../images/BG3.jpg')]
     lg:bg-[url('../images/BG.jpg')] 2xl:bg-[url('../images/BG1.jpg')]
 }
 

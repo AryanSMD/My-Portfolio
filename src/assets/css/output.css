@@ -939,7 +939,7 @@ body {
   background-attachment: fixed;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .home {
     background-image: url('../images/BG3.jpg');
   }
