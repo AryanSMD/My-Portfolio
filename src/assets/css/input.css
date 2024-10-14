@@ -197,32 +197,32 @@ body {
 
 .technologies .techno {
     &.vue {
-        -webkit-text-stroke: 2px #42b883;
+        -webkit-text-stroke: 1px #42b883;
         @apply
         text-transparent
     }
     &.nuxt {
-        -webkit-text-stroke: 2px #00DC82;
+        -webkit-text-stroke: 1px #00DC82;
         @apply
         text-transparent
     }
     &.tailwindcss {
-        -webkit-text-stroke: 2px #06b6d4;
+        -webkit-text-stroke: 1px #06b6d4;
         @apply
         text-transparent
     }
     &.typescript {
-        -webkit-text-stroke: 2px #007acc;
+        -webkit-text-stroke: 1px #007acc;
         @apply
         text-transparent
     }
     &.node {
-        -webkit-text-stroke: 2px #68a063;
+        -webkit-text-stroke: 1px #68a063;
         @apply
         text-transparent
     }
     &.supabase {
-        -webkit-text-stroke: 2px #3ecf8e;
+        -webkit-text-stroke: 1px #3ecf8e;
         @apply
         text-transparent
     }

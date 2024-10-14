@@ -612,6 +612,14 @@ video {
   margin-top: -100px;
 }
 
+.mt-\[-50px\] {
+  margin-top: -50px;
+}
+
+.mt-\[-40px\] {
+  margin-top: -40px;
+}
+
 .\!flex {
   display: flex !important;
 }
@@ -1117,37 +1125,37 @@ body {
 
 .technologies .techno {
   &.vue {
-    -webkit-text-stroke: 2px #42b883
+    -webkit-text-stroke: 1px #42b883
   }
   &.vue {
     color: transparent;
   }
   &.nuxt {
-    -webkit-text-stroke: 2px #00DC82
+    -webkit-text-stroke: 1px #00DC82
   }
   &.nuxt {
     color: transparent;
   }
   &.tailwindcss {
-    -webkit-text-stroke: 2px #06b6d4
+    -webkit-text-stroke: 1px #06b6d4
   }
   &.tailwindcss {
     color: transparent;
   }
   &.typescript {
-    -webkit-text-stroke: 2px #007acc
+    -webkit-text-stroke: 1px #007acc
   }
   &.typescript {
     color: transparent;
   }
   &.node {
-    -webkit-text-stroke: 2px #68a063
+    -webkit-text-stroke: 1px #68a063
   }
   &.node {
     color: transparent;
   }
   &.supabase {
-    -webkit-text-stroke: 2px #3ecf8e
+    -webkit-text-stroke: 1px #3ecf8e
   }
   &.supabase {
     color: transparent;
