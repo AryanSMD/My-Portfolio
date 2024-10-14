@@ -72,17 +72,32 @@
     </div>
 
     <div class="page home" id="home">
-        <div class="frontend" id="frontend"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-        >
-            FRONT_END
-        </div>
-        <div class="developer" id="developer"
-            data-aos="zoom-in-up"
-            data-aos-duration="1000"
-        >
-            <span id="one">D</span><span id="two">E</span><span id="three">V</span><span id="four">E</span><span id="five">L</span><span id="six">O</span><span id="seven">P</span><span id="eight">E</span><span id="nine">R</span>
+        <div class="container !overflow-visible">
+            <div class="left order-2 lg:order-1"></div>
+            <div class="right !w-auto order-1 lg:order-2">
+                <div class="w-max flex flex-col items-center z-[99] mt-[-100px] sm:mt-0">
+                    <div class="frontend" id="frontend"
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                    >
+                        FRONT-END
+                    </div>
+                    <div class="developer" id="developer" data-text="DEVELOPER"
+                        data-aos="zoom-in-up"
+                        data-aos-duration="1000"
+                    >
+                        DEVELOPER
+                    </div>
+                    <div class="technologies" id="technologies"
+                        data-aos="zoom-in-up"
+                        data-aos-duration="1000"
+                    >
+                        <div class="flex flex-col items-center">
+                            <span class="techno" id="techno"></span>
+                        </div>
+                    </div>    
+                </div>
+            </div>
         </div>
         <a class="scroll-down right-[-20px]" href="#about">
             About
@@ -93,26 +108,7 @@
     </div>
 
     <div class="page" id="about">
-        <div class="container">
-            <div class="left"
-                data-aos="fade-right"
-                data-aos-duration="1000"
-            >
-                <div class="title">About Me</div>
-                <div class="text">
-                    I was born in 2001 and started programming professionally in 2021.
-                    im very interested in <span class="font-medium italic">Front-End</span> and its 
-                    technologies, specially <span class="font-medium italic">Nuxt.js(Vue.js)</span>.
-                    I have experience of several freelance projects for RUDN university of Moscow.
-                </div>
-            </div>
-            <div class="right"
-                data-aos="zoom-in"
-                data-aos-duration="1000"
-            >
-                <img src="src/assets/images/pic.jpg" alt="" class="img">
-            </div>
-        </div>
+
         <a class="scroll-down right-[-37px]" href="#education">
             Education
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 aspect-square" viewBox="0 0 16 16">
@@ -122,42 +118,7 @@
     </div>
 
     <div class="page" id="education">
-        <div class="container">
-            <div class="left order-2 lg:order-1 !w-full !h-auto"
-                data-aos="flip-left"
-                data-aos-duration="1000"
-            >
-                <img src="src/assets/images/razi.jpg" alt="" class="img">
 
-            </div>
-            <div class="right order-1 lg:order-2"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-            >
-                <div class="title">Education</div>
-                <div class="text flex flex-col gap-1">
-                    <div class="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg" viewBox="0 0 16 16">
-                            <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41z"/>
-                        </svg>
-                        Electrical Engineering
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg" viewBox="0 0 16 16">
-                            <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z"/>
-                        </svg>
-                        Razi University
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg" viewBox="0 0 16 16">
-                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
-                            <path d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
-                        </svg>
-                        2019-2023
-                    </div>
-                </div>
-            </div>
-        </div>
         <a class="scroll-down right-[-18px]" href="#skills">
             Skills 
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 aspect-square" viewBox="0 0 16 16">
@@ -167,57 +128,7 @@
     </div>
 
     <div class="page" id="skills">
-        <div class="container">
-            <div class="left"
-                data-aos="fade-right"
-                data-aos-duration="1000"
-            >
-                <div class="title">Skills</div>
-            </div>
-            <div class="right !p-0"
-                data-aos="zoom-in"
-                data-aos-duration="1000"
-            >
-                <div class="skills">
-                    <a class="item" href="https://www.typescriptlang.org/" target="_blank">
-                        <img src="src/assets/svg/typescript.png" class="svg" alt="">
-                        TypeScript
-                    </a>
-                    <a class="item" href="https://vuejs.org/" target="_blank">
-                        <img src="src/assets/svg/vue.png" class="svg" alt="">
-                        VueJs
-                    </a>
-                    <a class="item" href="https://nuxt.com/" target="_blank">
-                        <img src="src/assets/svg/nuxt.png" class="svg" alt="">
-                        NuxtJs
-                    </a>
-                    <a class="item" href="https://www.javascript.com/" target="_blank">
-                        <img src="src/assets/svg/javascript.png" class="svg" alt="">
-                        JavaScript
-                    </a>
-                    <a class="item" href="https://tailwindcss.com/" target="_blank">
-                        <img src="src/assets/svg/tailwindcss.png" class="svg" alt="">
-                        TailwindCSS
-                    </a>
-                    <a class="item" href="https://nodejs.org/en" target="_blank">
-                        <img src="src/assets/svg/node.png" class="svg" alt="">
-                        NodeJs
-                    </a>
-                    <a class="item" href="https://html.com/" target="_blank">
-                        <img src="src/assets/svg/html.png" class="svg" alt="">
-                        HTML
-                    </a>
-                    <a class="item" href="https://css-tricks.com/" target="_blank">
-                        <img src="src/assets/svg/css.png" class="svg" alt="">
-                        CSS
-                    </a>
-                    <a class="item" href="https://git-scm.com/" target="_blank">
-                        <img src="src/assets/svg/git.png" class="svg" alt="">
-                        Git
-                    </a>
-                </div>
-            </div>
-        </div>
+
         <a class="scroll-down right-[-43px]" href="#experience">
             Experience
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 aspect-square" viewBox="0 0 16 16">
@@ -227,54 +138,6 @@
     </div>
 
     <div class="page !flex !flex-col" id="experience">
-        <div class="expirence-title"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-        >
-            Experiences
-        </div>
-        <div class="container">
-            <div class="experiences">
-                <div class="item"
-                    data-aos="zoom-in"
-                    data-aos-duration="1000"
-                >
-                    <div class="title">
-                        <span>ACT</span>
-                        <span>09/2023</span>
-                    </div>
-                    <div class="top">A web application for taking tests for RUDN university of Moscow.</div>
-                    <div class="bot"><span class="font-medium italic">Technologies :</span> Html, Css, JavaScript, JQuery, Vue3, Vuex, Axios, Git.</div>
-                    <div class="bot">https://github.com/naeimrezaeian/act</div>
-                </div>
-                <div class="item"
-                    data-aos="zoom-in"
-                    data-aos-duration="1000"
-                    data-aos-delay="500"
-                >
-                    <div class="title">
-                        <span>ACT_Admin</span>
-                        <span>09/2023</span>
-                    </div>
-                    <div class="top">ACT's admin web application for RUDN university of Moscow.</div>
-                    <div class="bot"><span class="font-medium italic">Technologies :</span> Html, Css, JavaScript, JQuery, Vue3, Vuex, Axios, Git.</div>
-                    <div class="bot">https://github.com/naeimrezaeian/ACT-ADMIN</div>
-                </div>
-                <div class="item"
-                    data-aos="zoom-in"
-                    data-aos-duration="1000"
-                    data-aos-delay="1000"
-                >
-                    <div class="title">
-                        <span>Roslovo_Admin</span>
-                        <span>06/2024</span>
-                    </div>
-                    <div class="top">Admin Panel for Roslovo a Language Learning App for RUDN university of Moscow.</div>
-                    <div class="bot"><span class="font-medium italic">Technologies :</span> Html, Css, JavaScript, TypeScript, JQuery, Vue3, Nuxt3, Pinia, Vee-Validate, Yup, Tailwindcss, ECharts, Axios, Git.</div>
-                    <div class="bot">https://github.com/mzarsaw/Roslovo-admin</div>
-                </div>
-            </div>
-        </div>
 
         <a class="scroll-down right-[-20px]" x-on:click="showModal = true" id="contactBtn2">
             Contact
@@ -319,8 +182,6 @@
     <div class="footer">
         &copy CopyRight. Designed And Developed By AryanSMD.
     </div>
-
-
 
     <script src="src/assets/js/jquery-3.7.0.js"></script>
     <script defer src="src/assets/js/alpinejs.js"></script>

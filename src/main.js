@@ -1,6 +1,7 @@
 AOS.init();
 import setFrontendStyle from './modules/frontendText.js';
 import setDeveloperStyle from './modules/developerText.js';
+import changeTechnoText from './modules/technologies.js';
 
 const home = document.getElementById('homeLink');
 const about = document.getElementById('aboutLink');
@@ -57,4 +58,5 @@ window.addEventListener('scroll', () => {
     setMenuStyle(scroll);
 })
 
-setMenuStyle(window.scrollY)
+setMenuStyle(window.scrollY);
+changeTechnoText();

@@ -4,14 +4,25 @@
 
 
 :root {
-    /* --primary: #1CFEFC; */
-    --primary: #c026d3;
+    /* --primary: #c026d3; */
+    --primary: #00ff00;
     --text: #F4F4F4;
 }
 
 html {
     @apply
     scroll-smooth
+}
+
+* {
+    @apply
+    m-0 p-0 box-border
+}
+
+body {
+    font-family: 'Kanit';
+    @apply
+    text-[1.125rem] text-text cursor-default overflow-x-hidden bg-black
 }
 
 ::-webkit-scrollbar {
@@ -25,17 +36,6 @@ html {
 ::-webkit-scrollbar-thumb {
     @apply
     bg-text rounded-md
-}
-
-* {
-    @apply
-    m-0 p-0 box-border
-}
-
-body {
-    font-family: 'Kanit';
-    @apply
-    text-[1.125rem] text-text cursor-default overflow-x-hidden bg-black
 }
 
 .logo {
@@ -114,158 +114,118 @@ body {
 
 .page {
     @apply
-    w-full h-screen overflow-hidden relative flex items-start lg:items-center
+    w-full h-screen overflow-hidden relative
 }
 
-.home {
+.page .container {
     @apply
-    bg-fixed bg-cover bg-[url('../images/BG2.jpg')] md:bg-[url('../images/BG3.jpg')]
-    lg:bg-[url('../images/BG1.jpg')]
-}
-
-.frontend {
-    text-shadow: 3px 3px 5px #444;
-    @apply
-    w-full text-center lg:w-auto text-[3rem] sm:text-[5rem] xl:text-[7rem] min-[1700px]:text-[9rem] z-[99]
-    left-0 lg:right-14 xl:right-28 lg:left-auto absolute mt-[100px] md:mt-[60px] lg:mt-0
-}
-
-.developer {
-    @apply
-    w-full text-center lg:w-auto text-[2rem] sm:text-[3rem] xl:text-[4rem] min-[1700px]:text-[5rem] tracking-[.7rem] 
-    sm:tracking-[1.3rem] lg:tracking-[1.4rem] xl:tracking-[2rem] min-[1700px]:tracking-[2.7rem] italic z-[99] ml-[4px] 
-    lg:mr-[-20px] xl:mr-[-30px] absolute left-0 lg:right-14 xl:right-28 lg:left-auto mt-[150px] sm:mt-[190px] 
-    md:mt-[150px] min-[1700px]:mt-[240px]
-}
-
-#one {
-    animation: developer 1s infinite alternate;
-}
-#two {
-    animation: developer 1s .1s infinite alternate;
-}
-#three {
-    animation: developer 1s .2s infinite alternate;
-}
-#four {
-    animation: developer 1s .3s infinite alternate;
-}
-#five {
-    animation: developer 1s .4s infinite alternate;
-}
-#six {
-    animation: developer 1s .5s infinite alternate;
-}
-#seven {
-    animation: developer 1s .6s infinite alternate;
-}
-#eight {
-    animation: developer 1s .7s infinite alternate;
-}
-#nine {
-    animation: developer 1s .8s infinite alternate;
-}
-@keyframes developer {
-    55% {
-        @apply
-        text-text
-    }
-    100% {
-        @apply
-        text-primary
-    }
-}
-
-.container {
-    @apply
-    h-full flex flex-col lg:flex-row items-center justify-between lg:gap-10 overflow-hidden px-8 pt-8
+    h-full flex flex-col lg:flex-row justify-center items-center gap-0
 }
 
 .page .container .left,
 .page .container .right {
     @apply
-    w-full lg:w-1/2 h-1/2 lg:h-full flex flex-col items-center justify-center sm:p-5
+    w-1/2 h-full flex justify-center items-center
 }
 
-.page .container .left .img,
-.page .container .right .img {
+.home {
     @apply
-    w-full sm:w-auto lg:w-full sm:h-full lg:h-auto aspect-square 2xl:p-10 min-[1800px]:p-0
+    bg-fixed bg-cover bg-[url('../images/BG2.jpg')] md:bg-[url('../images/BG3.jpg')]
+    lg:bg-[url('../images/BG.jpg')] 2xl:bg-[url('../images/BG1.jpg')]
 }
 
-.page .container .left .title,
-.page .container .right .title {
-    text-shadow: 3px 3px 5px var(--primary);
+.frontend {
+    text-shadow: 3px 3px 5px #444;
     @apply
-    text-[2.5rem] lg:text-[4rem] xl:text-[5rem] lg:mb-10 mt-5 lg:mt-0 italic
+    w-full lg:w-auto text-[3rem] sm:text-[5rem] xl:text-[7rem] min-[1700px]:text-[9rem]
 }
 
-.page .container .left .text,
-.page .container .right .text {
+.developer {
+    /* -webkit-text-stroke: .5px var(--primary); */
     @apply
-    sm:text-[1.5rem] xl:text-[1.8rem] 2xl:text-[2rem] text-justify lg:pl-5 2xl:px-8
+    w-full lg:w-auto text-[2rem] sm:text-[3rem] xl:text-[4rem] min-[1700px]:text-[5rem] tracking-[.7rem] 
+    sm:tracking-[1.3rem] lg:tracking-[1.4rem] xl:tracking-[2rem] min-[1700px]:tracking-[2.7rem] italic
+    text-transparent mt-[-10px] lg:mt-[-40px] lg:mr-[-30px]
 }
 
-.page .container .left .text .svg,
-.page .container .right .text .svg {
+.developer::before {
+    content: attr(data-text);
+    animation: developer 5s infinite alternate, cursor .8s linear infinite;
     @apply
-    w-4 sm:w-6 lg:w-8 aspect-square text-primary
+    absolute w-0 h-full border-r-[3px] border-primary left-0 top-0 text-primary overflow-hidden 
+    whitespace-nowrap
+}
+@keyframes developer {
+    100% {
+        @apply
+        w-full
+    }
+}
+@keyframes cursor {
+    100% {
+        @apply
+        border-none
+    }
 }
 
-.page .container .right .skills {
+.technologies {
     @apply
-    w-full h-full grid grid-cols-3 gap-3 rounded-md lg:py-20 mt-[-200px] lg:mt-0
+    w-full lg:w-auto text-[2rem] sm:text-[3rem] xl:text-[4rem] min-[1700px]:text-[5rem] overflow-hidden 
+    lg:mt-[-10px] 2xl:mt-[-20px]
 }
 
-.page .container .right .skills .item {
+.technologies div {
+    animation: techno 5s linear infinite;
+    filter: blur(15px);
     @apply
-    cursor-pointer flex flex-col items-center justify-center hover:scale-[1.05] hover:text-primary
-    transition-all duration-300 rounded-md text-[1rem] sm:text-[1.5rem] xl:text-[2rem]
+    translate-y-[100px]
 }
-.page .container .right .skills .item:hover {
-    box-shadow: 2px 2px 7px var(--primary), -2px -2px 7px var(--primary);
-}
-
-.page .container .right .skills .item .svg {
-    @apply
-    w-12 sm:w-20 xl:w-28 aspect-square
-}
-
-.page .container .experiences {
-    @apply
-    w-full h-full flex flex-col sm:px-16 py-20 gap-3 xl:gap-4 overflow-y-auto
-}
-
-.expirence-title {
-    text-shadow: 3px 3px 5px var(--primary);
-    @apply
-    mt-[50px] lg:mt-[80px] mb-[-100px] text-[2.5rem] lg:text-[4rem] xl:text-[5rem] text-center w-full italic
+@keyframes techno {
+    15% {
+        transform: translateY(0);
+        filter: blur(0);
+    }
+    85% {
+        transform: translateY(0);
+        filter: blur(0);
+    }
+    100% {
+        transform: translateY(-100px);
+        filter: blur(15px);
+    }
 }
 
-.page .container .experiences::-webkit-scrollbar {
-    @apply
-    hidden
-}
-
-.page .container .experiences .item {
-    @apply
-    w-full  bg-white bg-opacity-[15%] rounded-md p-2
-    flex flex-col justify-between shadow-md shadow-primary
-}
-
-.page .container .experiences .item .title {
-    @apply
-    sm:text-[1.3rem] lg:text-[1.6rem] 2xl:text-[1.8rem] flex justify-between items-center font-medium
-}
-
-.page .container .experiences .item .top {
-    @apply
-    text-[.8rem] xl:text-[1.4rem] text-white text-opacity-80
-}
-
-.page .container .experiences .item .bot {
-    @apply
-    text-white text-[.8rem] xl:text-[1.125rem] text-opacity-60
+.technologies .techno {
+    &.vue {
+        -webkit-text-stroke: 2px #42b883;
+        @apply
+        text-transparent
+    }
+    &.nuxt {
+        -webkit-text-stroke: 2px #00DC82;
+        @apply
+        text-transparent
+    }
+    &.tailwindcss {
+        -webkit-text-stroke: 2px #06b6d4;
+        @apply
+        text-transparent
+    }
+    &.typescript {
+        -webkit-text-stroke: 2px #007acc;
+        @apply
+        text-transparent
+    }
+    &.node {
+        -webkit-text-stroke: 2px #68a063;
+        @apply
+        text-transparent
+    }
+    &.supabase {
+        -webkit-text-stroke: 2px #3ecf8e;
+        @apply
+        text-transparent
+    }
 }
 
 .modal {
