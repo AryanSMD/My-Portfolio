@@ -1,5 +1,11 @@
-const techno = document.getElementById('techno');
-const technologies = [
+const techno = document.getElementById('techno') as HTMLSpanElement;
+
+interface Technology {
+    key: string,
+    value: string
+}
+
+const technologies: Technology[] = [
     {
         key: 'vue',
         value: 'Vue.js'
@@ -29,8 +35,7 @@ techno.innerHTML = technologies[0].value;
 techno.classList.add(technologies[0].key);
 let i = 0;
 
-
-export default function changeTechnoText() {
+export default function changeTechnoText(): void {
     setInterval(() => {
         techno.classList.remove(technologies[i].key);
         i != 5 ? i++ : i = 0;

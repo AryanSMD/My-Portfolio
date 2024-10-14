@@ -1,28 +1,27 @@
-AOS.init();
 import setFrontendStyle from './modules/frontendText.js';
 import setDeveloperStyle from './modules/developerText.js';
 import changeTechnoText from './modules/technologies.js';
 
-const home = document.getElementById('homeLink');
-const about = document.getElementById('aboutLink');
-const education = document.getElementById('educationLink');
-const skills = document.getElementById('skillsLink');
-const experience = document.getElementById('experienceLink');
-const contactBtn1 = document.getElementById('contactBtn1');
-const contactBtn2 = document.getElementById('contactBtn2');
-const closeModalBtn = document.getElementById('close');
+const home = document.getElementById('homeLink') as HTMLAnchorElement;
+const about = document.getElementById('aboutLink') as HTMLAnchorElement;
+const education = document.getElementById('educationLink') as HTMLAnchorElement;
+const skills = document.getElementById('skillsLink') as HTMLAnchorElement;
+const experience = document.getElementById('experienceLink') as HTMLAnchorElement;
+const contactBtn1 = document.getElementById('contactBtn1') as HTMLAnchorElement;
+const contactBtn2 = document.getElementById('contactBtn2') as HTMLAnchorElement;
+const closeModalBtn = document.getElementById('close') as HTMLElement;
 
-function setColor(elem) {
+function setColor(elem: HTMLElement): void {
     elem.classList.add('!text-primary');
 }
-function clear() {
+function clear(): void {
     home.classList.remove('!text-primary');
     about.classList.remove('!text-primary');
     education.classList.remove('!text-primary');
     skills.classList.remove('!text-primary');
     experience.classList.remove('!text-primary');
 }
-function setMenuStyle(scroll) {
+function setMenuStyle(scroll: number): void {
     if (scroll < window.screen.height - 500) {
         clear();
         setColor(home);
@@ -52,7 +51,7 @@ closeModalBtn.addEventListener('click', () => {
 })
 
 window.addEventListener('scroll', () => {
-    const scroll = window.scrollY;
+    const scroll: number = window.scrollY;
     setFrontendStyle(scroll);
     setDeveloperStyle(scroll);
     setMenuStyle(scroll);

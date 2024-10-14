@@ -624,20 +624,12 @@ video {
   aspect-ratio: 1 / 1;
 }
 
-.\!h-auto {
-  height: auto !important;
-}
-
 .h-full {
   height: 100%;
 }
 
 .\!w-auto {
   width: auto !important;
-}
-
-.\!w-full {
-  width: 100% !important;
 }
 
 .w-5 {
@@ -667,32 +659,12 @@ video {
   align-items: center;
 }
 
-.gap-1 {
-  gap: 0.25rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
-}
-
 .\!overflow-visible {
   overflow: visible !important;
 }
 
 .overflow-y-hidden {
   overflow-y: hidden;
-}
-
-.\!p-0 {
-  padding: 0px !important;
-}
-
-.font-medium {
-  font-weight: 500;
-}
-
-.italic {
-  font-style: italic;
 }
 
 .\!text-primary {
