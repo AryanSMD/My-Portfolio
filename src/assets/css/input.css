@@ -125,7 +125,36 @@ body {
 .page .container .left,
 .page .container .right {
     @apply
-    w-1/2 h-full flex justify-center items-center
+    h-1/2 lg:h-full w-full lg:w-1/2 flex justify-center items-center
+}
+
+.page .container .left .content,
+.page .container .right .content {
+    @apply
+    w-full h-full flex flex-col justify-center items-center
+}
+
+.page .container .left .img,
+.page .container .right .img {
+    @apply
+    w-full h-full flex justify-center items-center px-[20px] sm:px-[100px] lg:px-4 xl:px-[50px] min-[1700px]:px-5
+}
+
+.page .container .header {
+    @apply
+    text-center italic text-[1.5rem] sm:text-[2rem] lg:text-[3rem] 2xl:text-[3.7rem] min-[1700px]:text-[4rem]
+    text-primary mb-2 font-medium mt-[50px] sm:mt-0
+}
+
+.page .container .text {
+    @apply
+    text-justify text-[.75rem] sm:text-[1.05rem] lg:text-[1.4rem] 2xl:text-[1.7rem] min-[1700px]:text-[2rem]
+    font-sans
+}
+
+.page .container .text .bold {
+    @apply
+    font-bold italic
 }
 
 .home {
@@ -170,7 +199,7 @@ body {
 
 .technologies {
     @apply
-    w-full lg:w-auto text-[2rem] sm:text-[3rem] xl:text-[4rem] min-[1700px]:text-[5rem] overflow-hidden 
+    w-full lg:w-auto text-[1.5rem] sm:text-[2.5rem] xl:text-[3.5rem] min-[1700px]:text-[4rem] overflow-hidden 
     lg:mt-[-10px] 2xl:mt-[-20px]
 }
 
@@ -221,6 +250,8 @@ body {
         text-[#3ecf8e]
     }
 }
+
+
 
 .modal {
     @apply
