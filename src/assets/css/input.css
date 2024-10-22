@@ -137,18 +137,18 @@ body {
 .page .container .left .img,
 .page .container .right .img {
     @apply
-    w-full h-full flex justify-center items-center px-[20px] sm:px-[100px] lg:px-4 xl:px-[50px] min-[1700px]:px-5
+    w-full h-full flex justify-center items-center px-[20px] sm:px-[100px] lg:px-4 xl:px-[90px] min-[1700px]:px-5
 }
 
 .page .container .header {
     @apply
-    text-center italic text-[1.5rem] sm:text-[2rem] lg:text-[3rem] 2xl:text-[3.7rem] min-[1700px]:text-[4rem]
+    text-center italic text-[1.5rem] sm:text-[2rem] lg:text-[3rem] xl:text-[3.5rem] min-[1700px]:text-[4rem]
     text-primary mb-2 font-medium mt-[50px] sm:mt-0
 }
 
 .page .container .text {
     @apply
-    text-justify text-[.75rem] sm:text-[1.05rem] lg:text-[1.4rem] 2xl:text-[1.7rem] min-[1700px]:text-[2rem]
+    text-justify text-[.75rem] sm:text-[1.05rem] lg:text-[1.4rem] xl:text-[1.5rem] min-[1700px]:text-[2rem]
     font-sans
 }
 
