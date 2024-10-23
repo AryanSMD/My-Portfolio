@@ -299,6 +299,48 @@ body {
     w-full
 }
 
+.page .container .content .experiences {
+    @apply
+    w-[85%] sm:w-[60%] flex flex-col gap-3 lg:gap-5
+}
+
+.page .container .content .experiences .item {
+    @apply
+    w-full flex flex-col relative rounded-md p-2 lg:p-3 border-[1px] border-primary border-dashed gap-0
+    cursor-pointer
+}
+
+.page .container .content .experiences .item .svg {
+    @apply
+    w-6 lg:w-8 aspect-square absolute left-[-10px] lg:left-[-15px] top-[-10px] lg:top-[-15px] -rotate-45
+}
+
+.page .container .content .experiences .item .title {
+    @apply
+    w-full flex items-center justify-between font-medium text-[1.2rem] lg:text-[1.8rem]
+}
+
+.page .container .content .experiences .item .desc {
+    @apply
+    w-full flex items-center justify-start text-opacity-80 text-white text-[1rem] lg:text-[1.2rem] 
+    min-[1700px]:text-[1.5rem] font-sans
+}
+
+.height-auto {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: all .3s;
+    
+    &.show {
+        grid-template-rows: 1fr;
+    }
+}
+
+.height-auto > div {
+    overflow: hidden;
+}
+
 .modal {
     @apply
     fixed left-0 top-0 w-screen h-screen bg-white bg-opacity-10 z-[110] flex justify-center items-center

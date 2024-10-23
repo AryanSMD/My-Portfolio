@@ -640,6 +640,10 @@ video {
   width: auto !important;
 }
 
+.w-4 {
+  width: 1rem;
+}
+
 .w-5 {
   width: 1.25rem;
 }
@@ -647,6 +651,11 @@ video {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.-rotate-90 {
+  --tw-rotate: -90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .\!scale-100 {
@@ -671,6 +680,14 @@ video {
   justify-content: center !important;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
+.gap-\[2px\] {
+  gap: 2px;
+}
+
 .\!overflow-visible {
   overflow: visible !important;
 }
@@ -691,12 +708,30 @@ video {
   padding-left: 0px !important;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .\!text-primary {
   color: var(--primary) !important;
 }
 
+.text-primary {
+  color: var(--primary);
+}
+
 .\!opacity-100 {
   opacity: 1 !important;
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 :root {
@@ -1492,6 +1527,115 @@ body {
   width: 100%;
 }
 
+.page .container .content .experiences {
+  display: flex;
+  width: 85%;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .page .container .content .experiences {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page .container .content .experiences {
+    gap: 1.25rem;
+  }
+}
+
+.page .container .content .experiences .item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 0px;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  border-style: dashed;
+  border-color: var(--primary);
+  padding: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .page .container .content .experiences .item {
+    padding: 0.75rem;
+  }
+}
+
+.page .container .content .experiences .item .svg {
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  aspect-ratio: 1 / 1;
+  width: 1.5rem;
+  --tw-rotate: -45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 1024px) {
+  .page .container .content .experiences .item .svg {
+    left: -15px;
+    top: -15px;
+    width: 2rem;
+  }
+}
+
+.page .container .content .experiences .item .title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+  .page .container .content .experiences .item .title {
+    font-size: 1.8rem;
+  }
+}
+
+.page .container .content .experiences .item .desc {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-text-opacity: 0.8;
+}
+
+@media (min-width: 1024px) {
+  .page .container .content .experiences .item .desc {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1700px) {
+  .page .container .content .experiences .item .desc {
+    font-size: 1.5rem;
+  }
+}
+
+.height-auto {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: all .3s;
+  &.show {
+    grid-template-rows: 1fr;
+  }
+}
+
+.height-auto > div {
+  overflow: hidden;
+}
+
 .modal {
   position: fixed;
   left: 0px;
@@ -1630,5 +1774,13 @@ body {
 
   .lg\:order-2 {
     order: 2;
+  }
+
+  .lg\:w-5 {
+    width: 1.25rem;
+  }
+
+  .lg\:gap-2 {
+    gap: 0.5rem;
   }
 }
