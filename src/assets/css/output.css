@@ -1375,7 +1375,7 @@ body {
   width: 100%;
   align-items: center;
   justify-content: center;
-  row-gap: 0.75rem;
+  row-gap: 0.25rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
