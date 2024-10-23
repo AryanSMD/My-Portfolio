@@ -240,21 +240,31 @@ body {
     2xl:w-[550px] min-[1700px]:w-[80%] self-end lg:self-center
 }
 
-.page .container .header {
+.page .container .content .header {
     @apply
     text-center italic text-[1.5rem] sm:text-[2rem] lg:text-[3rem] xl:text-[3.5rem] min-[1700px]:text-[4rem]
     text-primary mb-2 font-medium mt-4 lg:mt-0
 }
 
-.page .container .text {
+.page .container .content .text {
     @apply
     text-justify text-[.8rem] sm:text-[1.05rem] lg:text-[1.4rem] xl:text-[1.5rem] min-[1700px]:text-[1.8rem]
     font-sans w-[80%] min-[300px]:w-[300px] sm:w-[70%] lg:w-[75%] xl:w-[100%]
 }
 
-.page .container .text span {
+.page .container .content .text span {
     @apply
     font-bold italic
+}
+
+.page .container .content .item {
+    @apply
+    flex items-center gap-2 text-[1rem] sm:text-[1.2rem] lg:text-[1.5rem]
+}
+
+.page .container .content .item .svg {
+    @apply
+    w-5 lg:w-6 aspect-square text-primary
 }
 
 .modal {
