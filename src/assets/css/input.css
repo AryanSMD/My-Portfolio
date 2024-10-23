@@ -301,7 +301,11 @@ body {
 
 .page .container .content .experiences {
     @apply
-    w-[85%] sm:w-[60%] flex flex-col gap-3 lg:gap-5
+    w-[85%] sm:w-[60%] flex flex-col gap-3 lg:gap-5 p-4 overflow-y-auto
+}
+.page .container .content .experiences::-webkit-scrollbar {
+    @apply
+    w-0
 }
 
 .page .container .content .experiences .item {
@@ -323,7 +327,7 @@ body {
 .page .container .content .experiences .item .desc {
     @apply
     w-full text-opacity-80 text-white text-[1rem] lg:text-[1.2rem] 
-    min-[1700px]:text-[1.5rem] font-sans
+    min-[1700px]:text-[1.5rem] font-sans mt-3
 }
 
 .height-auto {
