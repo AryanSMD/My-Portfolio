@@ -60,7 +60,7 @@ body {
     grid-template-rows: 0fr;
     transition: all .7s;
     @apply
-    w-full grid-cols-1 bg-black bg-opacity-90 rounded-md mt-[10px] sm:mt-0
+    w-full grid-cols-1 bg-black bg-opacity-90 sm:rounded-md mt-[10px] sm:mt-0
 }
 .sidebar .menu {
     &.show {
@@ -128,31 +128,30 @@ body {
     h-1/2 lg:h-full w-full lg:w-1/2 flex justify-center items-center
 }
 
-.page .container .left .content,
-.page .container .right .content {
+.page .container .content {
     @apply
-    w-full h-full flex flex-col justify-center items-center
+    w-full h-full flex flex-col justify-start lg:justify-center items-center xl:pl-[150px] min-[1700px]:pl-0
 }
 
-.page .container .left .img,
-.page .container .right .img {
+.page .container .img {
     @apply
-    w-full h-full flex justify-center items-center px-[20px] sm:px-[100px] lg:px-4 xl:px-[90px] min-[1700px]:px-5
+    rounded-full aspect-square w-[95%] min-[300px]:w-[300px] sm:w-[320px] lg:w-[450px] xl:w-[500px]
+    2xl:w-[550px] min-[1700px]:w-[80%] self-end lg:self-center
 }
 
 .page .container .header {
     @apply
     text-center italic text-[1.5rem] sm:text-[2rem] lg:text-[3rem] xl:text-[3.5rem] min-[1700px]:text-[4rem]
-    text-primary mb-2 font-medium mt-[50px] sm:mt-0
+    text-primary mb-2 font-medium mt-4 lg:mt-0
 }
 
 .page .container .text {
     @apply
-    text-justify text-[.75rem] sm:text-[1.05rem] lg:text-[1.4rem] xl:text-[1.5rem] min-[1700px]:text-[2rem]
-    font-sans
+    text-justify text-[.8rem] sm:text-[1.05rem] lg:text-[1.4rem] xl:text-[1.5rem] min-[1700px]:text-[1.8rem]
+    font-sans w-[95%] min-[300px]:w-[300px] sm:w-[70%] lg:w-[75%] xl:w-[100%]
 }
 
-.page .container .text .bold {
+.page .container .text span {
     @apply
     font-bold italic
 }
