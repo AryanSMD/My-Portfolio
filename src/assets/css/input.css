@@ -242,7 +242,7 @@ body {
 
 .page .container .content .header {
     @apply
-    text-center italic text-[1.5rem] sm:text-[2rem] lg:text-[3rem] xl:text-[3.5rem] min-[1700px]:text-[4rem]
+    text-center italic text-[2rem] lg:text-[3rem] xl:text-[3.5rem] min-[1700px]:text-[4rem]
     text-primary mb-2 font-medium mt-4 lg:mt-0
 }
 
@@ -265,6 +265,38 @@ body {
 .page .container .content .item .svg {
     @apply
     w-5 lg:w-6 aspect-square text-primary
+}
+
+.page .container .content .skills {
+    @apply
+    w-full sm:w-[85%] md:w-[90%] lg:w-[85%] xl:w-[70%] min-[1700px]:w-[80%] grid sm:grid-cols-3 justify-center 
+    items-center mt-5 sm:mt-10 gap-y-3 sm:gap-y-10 lg:gap-14 min-[1700px]:gap-[70px] px-2
+}
+
+.page .container .content .skills .item {
+    @apply
+    flex flex-col gap-1 lg:gap-4
+}
+
+.page .container .content .skills .name {
+    @apply
+    w-full flex items-center justify-start gap-2 cursor-pointer text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] 
+    min-[1700px]:text-[2.9rem]
+}
+
+.page .container .content .skills .name img {
+    @apply
+    w-8 md:w-10 lg:w-14 min-[1700px]:w-[70px] aspect-square
+}
+
+.page .container .content .skills .label {
+    @apply
+    w-0 h-[2px] transition-all duration-300 bg-primary self-start
+}
+
+.page .container .content .skills .item:hover > .label {
+    @apply
+    w-full
 }
 
 .modal {
