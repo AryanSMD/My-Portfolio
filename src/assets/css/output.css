@@ -1600,10 +1600,7 @@ body {
 }
 
 .page .container .content .experiences .item .desc {
-  display: flex;
   width: 100%;
-  align-items: center;
-  justify-content: flex-start;
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   color: rgb(255 255 255 / var(--tw-text-opacity));

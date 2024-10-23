@@ -322,7 +322,7 @@ body {
 
 .page .container .content .experiences .item .desc {
     @apply
-    w-full flex items-center justify-start text-opacity-80 text-white text-[1rem] lg:text-[1.2rem] 
+    w-full text-opacity-80 text-white text-[1rem] lg:text-[1.2rem] 
     min-[1700px]:text-[1.5rem] font-sans
 }
 
