@@ -1371,7 +1371,6 @@ body {
 }
 
 .page .container .content .skills {
-  margin-top: 1.25rem;
   display: grid;
   width: 100%;
   align-items: center;

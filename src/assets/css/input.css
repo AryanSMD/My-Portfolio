@@ -270,7 +270,7 @@ body {
 .page .container .content .skills {
     @apply
     w-full sm:w-[85%] md:w-[90%] lg:w-[85%] xl:w-[70%] min-[1700px]:w-[80%] grid sm:grid-cols-3 justify-center 
-    items-center mt-5 sm:mt-10 gap-y-3 sm:gap-y-10 lg:gap-14 min-[1700px]:gap-[70px] px-2
+    items-center sm:mt-10 gap-y-3 sm:gap-y-10 lg:gap-14 min-[1700px]:gap-[70px] px-2
 }
 
 .page .container .content .skills .item {
