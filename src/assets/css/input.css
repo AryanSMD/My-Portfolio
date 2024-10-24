@@ -311,7 +311,7 @@ body {
 .page .container .content .experiences .item {
     @apply
     w-full flex flex-col relative rounded-md p-2 lg:p-3 border-[1px] border-primary border-dashed gap-0
-    cursor-pointer
+    cursor-pointer bg-[#6E6E6E] bg-opacity-60 last:mb-10
 }
 
 .page .container .content .experiences .item .svg {
@@ -326,7 +326,7 @@ body {
 
 .page .container .content .experiences .item .desc {
     @apply
-    w-full text-opacity-80 text-white text-[1rem] lg:text-[1.2rem] 
+    w-full text-opacity-90 text-white text-[1rem] lg:text-[1.2rem] 
     min-[1700px]:text-[1.5rem] font-sans mt-3
 }
 

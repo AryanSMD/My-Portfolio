@@ -314,7 +314,10 @@
             <div class="content !p-0 !justify-center">
                 <div class="header">Experiences</div>
                 <div class="experiences" x-data="{ items:[false, false, false] }">
-                    <div class="item" x-on:click="items[0] = !items[0]">
+                    <div class="item" x-on:click="items[0] = !items[0]"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg" viewBox="0 0 16 16">
                             <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"/>
                         </svg>
@@ -332,7 +335,7 @@
                         <div class="height-auto" :class="items[0] && 'show'">
                             <div>
                                 <div class="desc">
-                                    A web application for taking tests for RUDN university of Moscow.
+                                    A web application for taking tests for <span class="underline">RUDN university of Russia</span>.
                                 </div>
                                 <div class="desc">
                                     <span class="font-medium">Technologies</span>: Html, Css, JavaScript, JQuery, Vue3, Vuex, Axios, Git.
@@ -340,7 +343,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item" x-on:click="items[1] = !items[1]">
+                    <div class="item" x-on:click="items[1] = !items[1]"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                        data-aos-duration="1000"
+                        data-aos-offset="-100"
+                    >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg" viewBox="0 0 16 16">
                             <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"/>
                         </svg>
@@ -358,7 +366,7 @@
                         <div class="height-auto" :class="items[1] && 'show'">
                             <div>
                                 <div class="desc">
-                                    ACT's admin panel web application for RUDN university of Moscow.
+                                    ACT's admin panel web application for <span class="underline">RUDN university of Russia</span>.
                                 </div>
                                 <div class="desc">
                                     <span class="font-medium">Technologies</span>: Html, Css, JavaScript, JQuery, Vue3, Vuex, Axios, Git.
@@ -366,12 +374,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item" x-on:click="items[2] = !items[2]">
+                    <div class="item" x-on:click="items[2] = !items[2]"
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                        data-aos-duration="1000"
+                        data-aos-offset="-100"
+                    >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg" viewBox="0 0 16 16">
                             <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"/>
                         </svg>
                         <div class="title">
-                            <div>Roslovo</div>
+                            <div>Roslovo-Admin</div>
                             <div class="flex items-center justify-center gap-[2px] lg:gap-2">
                                 06/2024
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 lg:w-5 transition-transform duration-300 text-primary" viewBox="0 0 16 16"
@@ -384,7 +397,7 @@
                         <div class="height-auto" :class="items[2] && 'show'">
                             <div>
                                 <div class="desc">
-                                    Admin Panel for Roslovo a Language Learning App for RUDN university of Moscow.
+                                    Admin Panel for Roslovo a Language Learning App for <span class="underline">RUDN university of Russia</span>.
                                 </div>
                                 <div class="desc">
                                     <span class="font-medium">Technologies</span>: Html, Css, JavaScript, TypeScript, JQuery, Vue3, Nuxt3, Pinia, 

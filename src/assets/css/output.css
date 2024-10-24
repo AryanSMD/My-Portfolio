@@ -720,6 +720,10 @@ video {
   color: var(--primary);
 }
 
+.underline {
+  text-decoration-line: underline;
+}
+
 .\!opacity-100 {
   opacity: 1 !important;
 }
@@ -1563,7 +1567,13 @@ body {
   border-width: 1px;
   border-style: dashed;
   border-color: var(--primary);
+  background-color: rgb(110 110 110 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.6;
   padding: 0.5rem;
+}
+
+.page .container .content .experiences .item:last-child {
+  margin-bottom: 2.5rem;
 }
 
 @media (min-width: 1024px) {
@@ -1611,7 +1621,7 @@ body {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-  --tw-text-opacity: 0.8;
+  --tw-text-opacity: 0.9;
 }
 
 @media (min-width: 1024px) {
