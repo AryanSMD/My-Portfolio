@@ -187,7 +187,6 @@ body {
 }
 
 .technologies div {
-    animation: techno 5s linear infinite;
     filter: blur(15px);
     @apply
     translate-y-[100px]

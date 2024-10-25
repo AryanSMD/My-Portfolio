@@ -1,3 +1,4 @@
+const technoDiv = document.getElementById('technoDiv') as HTMLDivElement;
 const techno = document.getElementById('techno') as HTMLSpanElement;
 
 interface Technology {
@@ -31,9 +32,12 @@ const technologies: Technology[] = [
         value: 'SupaBase'
     }
 ];
+
 techno.innerHTML = technologies[0].value;
 techno.classList.add(technologies[0].key);
+technoDiv.style.animation = 'techno 5s linear infinite';
 let i = 0;
+
 
 export default function changeTechnoText(): void {
     setInterval(() => {

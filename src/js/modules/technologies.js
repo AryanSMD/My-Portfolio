@@ -1,3 +1,4 @@
+const technoDiv = document.getElementById('technoDiv');
 const techno = document.getElementById('techno');
 const technologies = [
     {
@@ -27,6 +28,7 @@ const technologies = [
 ];
 techno.innerHTML = technologies[0].value;
 techno.classList.add(technologies[0].key);
+technoDiv.style.animation = 'techno 5s linear infinite';
 let i = 0;
 export default function changeTechnoText() {
     setInterval(() => {
