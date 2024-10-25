@@ -85,7 +85,7 @@ body {
 .sidebar .menu .item {
     @apply
     w-full flex justify-start sm:justify-center items-center cursor-pointer transition-all duration-300 text-text 
-    hover:text-primary p-4 gap-2
+    hover:text-primary p-3 min-[1700px]:p-[14px] gap-2
 }
 
 .sidebar .menu .item .text {
@@ -95,7 +95,7 @@ body {
 
 .sidebar .menu .item .svg {
     @apply
-    w-6 lg:h-full aspect-square
+    w-6 sm:w-5 min-[1700px]:w-6 lg:h-full aspect-square
 }
 
 .scroll-down {
