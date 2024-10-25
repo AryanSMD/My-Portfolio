@@ -735,7 +735,6 @@ video {
 }
 
 :root {
-  /* --primary: #c026d3; */
   --primary: #00ff00;
   --text: #F4F4F4;
 }
@@ -1081,13 +1080,12 @@ body {
 }
 
 .developer {
-  /* -webkit-text-stroke: .5px var(--primary); */
   margin-top: -10px;
   width: 100%;
   font-size: 2rem;
   font-style: italic;
   letter-spacing: .7rem;
-  color: transparent
+  color: transparent;
 }
 
 @media (min-width: 640px) {

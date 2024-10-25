@@ -4,7 +4,6 @@
 
 
 :root {
-    /* --primary: #c026d3; */
     --primary: #00ff00;
     --text: #F4F4F4;
 }
@@ -153,7 +152,6 @@ body {
 }
 
 .developer {
-    /* -webkit-text-stroke: .5px var(--primary); */
     @apply
     w-full lg:w-auto text-[2rem] sm:text-[3rem] xl:text-[4rem] min-[1700px]:text-[5rem] tracking-[.7rem] 
     sm:tracking-[1.3rem] lg:tracking-[1.4rem] xl:tracking-[2rem] min-[1700px]:tracking-[2.7rem] italic
