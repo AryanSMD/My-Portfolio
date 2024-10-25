@@ -95,7 +95,7 @@ body {
 
 .sidebar .menu .item .svg {
     @apply
-    w-6 sm:w-5 min-[1700px]:w-6 lg:h-full aspect-square
+    w-6 sm:w-[22px] min-[1700px]:w-6 lg:h-full aspect-square
 }
 
 .scroll-down {

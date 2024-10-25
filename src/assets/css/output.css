@@ -928,7 +928,7 @@ body {
 
 @media (min-width: 640px) {
   .sidebar .menu .item .svg {
-    width: 1.25rem;
+    width: 22px;
   }
 }
 
