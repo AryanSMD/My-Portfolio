@@ -81,7 +81,8 @@ body {
 .sidebar .menu > div {
     overflow: hidden;
     position: relative;
-    padding: 5px 0 0 0;
+    @apply
+    sm:pt-[5px]
 }
 
 .sidebar .menu div .light {

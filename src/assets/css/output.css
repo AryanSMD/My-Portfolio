@@ -883,8 +883,13 @@ body {
 
 .sidebar .menu > div {
   overflow: hidden;
-  position: relative;
-  padding: 5px 0 0 0;
+  position: relative
+}
+
+@media (min-width: 640px) {
+  .sidebar .menu > div {
+    padding-top: 5px;
+  }
 }
 
 .sidebar .menu div .light {
