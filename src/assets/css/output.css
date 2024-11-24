@@ -938,11 +938,14 @@ body {
   }
 }
 
+.sidebar .menu .item.active {
+  color: var(--primary);
+}
+
 .sidebar .menu .item.active .svg {
   filter: drop-shadow(0 0 1px #00c500)
         drop-shadow( 0 0 10px #00c500)
         drop-shadow( 0 0 14px #00c500);
-  color: var(--primary)
 }
 
 @media (min-width: 640px) {
