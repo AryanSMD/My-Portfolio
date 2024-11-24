@@ -883,6 +883,29 @@ body {
 
 .sidebar .menu > div {
   overflow: hidden;
+  position: relative;
+  padding: 5px 0 0 0;
+}
+
+.sidebar .menu div .light {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  display: none;
+  height: 50px;
+  width: 3px;
+  border-radius: 0.375rem;
+  background-color: var(--primary);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: .05s;
+}
+
+@media (min-width: 640px) {
+  .sidebar .menu div .light {
+    display: block;
+  }
 }
 
 .sidebar .menu .item {
@@ -913,6 +936,13 @@ body {
   .sidebar .menu .item {
     padding: 14px;
   }
+}
+
+.sidebar .menu .item.active .svg {
+  filter: drop-shadow(0 0 1px #00c500)
+        drop-shadow( 0 0 10px #00c500)
+        drop-shadow( 0 0 14px #00c500);
+  color: var(--primary)
 }
 
 @media (min-width: 640px) {
@@ -1583,9 +1613,6 @@ body {
   flex-direction: column;
   gap: 0px;
   border-radius: 0.375rem;
-  border-width: 1px;
-  border-style: dashed;
-  border-color: var(--primary);
   background-color: rgb(110 110 110 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.6;
   padding: 0.5rem;

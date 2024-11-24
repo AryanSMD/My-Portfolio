@@ -2,50 +2,51 @@ import setFrontendStyle from './modules/frontendText.js';
 import setDeveloperStyle from './modules/developerText.js';
 import changeTechnoText from './modules/technologies.js';
 
-const home = document.getElementById('homeLink') as HTMLAnchorElement;
-const about = document.getElementById('aboutLink') as HTMLAnchorElement;
-const education = document.getElementById('educationLink') as HTMLAnchorElement;
-const skills = document.getElementById('skillsLink') as HTMLAnchorElement;
-const experience = document.getElementById('experienceLink') as HTMLAnchorElement;
-const contactBtn1 = document.getElementById('contactBtn1') as HTMLAnchorElement;
-const contactBtn2 = document.getElementById('contactBtn2') as HTMLAnchorElement;
-const closeModalBtn = document.getElementById('close') as HTMLElement;
 
-function setColor(elem: HTMLElement): void {
-    elem.classList.add('!text-primary');
-}
-function clear(): void {
-    home.classList.remove('!text-primary');
-    about.classList.remove('!text-primary');
-    education.classList.remove('!text-primary');
-    skills.classList.remove('!text-primary');
-    experience.classList.remove('!text-primary');
-}
-function setMenuStyle(scroll: number): void {
-    if (scroll < window.screen.height - 500) {
-        clear();
-        setColor(home);
-    } else if (scroll > window.screen.height - 500 && scroll < (window.screen.height * 2) - 500) {
-        clear();
-        setColor(about);
-    } else if (scroll > (window.screen.height * 2) - 500 && scroll < (window.screen.height * 3) - 500) {
-        clear();
-        setColor(education);
-    } else if (scroll > (window.screen.height * 3) - 500 && scroll < (window.screen.height * 4) - 500) {
-        clear();
-        setColor(skills);
-    } else if (scroll > (window.screen.height * 4) - 500) {
-        clear();
-        setColor(experience);
+const links = document.querySelectorAll('#link') as NodeListOf<Element>;
+const contactBtn = document.querySelectorAll('#contactBtn') as NodeListOf<Element>;
+const closeModalBtn = document.getElementById('close') as HTMLElement;
+const light = document.getElementsByClassName('light')[0] as HTMLDivElement;
+
+
+function setColor(event: Element|null = null): void {
+    links.forEach(e => {
+        e.classList.remove('active');
+    })
+
+    if (event) {
+        event.classList.add('active');
+        moveLight(event);
     }
 }
 
-contactBtn1.addEventListener('click', () => {
-    clear();
+function moveLight({ offsetTop, offsetHeight }: any) {
+    light.style.transform = `translateY(${ offsetTop - offsetHeight/10}px)`;
+}
+
+function setMenuStyle(scroll: number): void {
+    if (scroll < window.screen.height - 500) {
+        setColor(links[0]);
+
+    } else if (scroll > window.screen.height - 500 && scroll < (window.screen.height * 2) - 500) {
+        setColor(links[1]);
+
+    } else if (scroll > (window.screen.height * 2) - 500 && scroll < (window.screen.height * 3) - 500) {
+        setColor(links[2]);
+
+    } else if (scroll > (window.screen.height * 3) - 500 && scroll < (window.screen.height * 4) - 500) {
+        setColor(links[3]);
+
+    } else if (scroll > (window.screen.height * 4) - 500) {
+        setColor(links[4]);
+    }
+}
+
+
+contactBtn.forEach(e => {
+    e.addEventListener('click', () => setColor())
 })
-contactBtn2.addEventListener('click', () => {
-    clear();
-})
+
 closeModalBtn.addEventListener('click', () => {
     setMenuStyle(window.scrollY);
 })

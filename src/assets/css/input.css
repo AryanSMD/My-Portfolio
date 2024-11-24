@@ -80,12 +80,28 @@ body {
 
 .sidebar .menu > div {
     overflow: hidden;
+    position: relative;
+    padding: 5px 0 0 0;
+}
+
+.sidebar .menu div .light {
+    @apply
+    hidden sm:block absolute bg-primary w-[3px] h-[50px] rounded-md left-[5px] top-[5px] 
+    transition-all duration-[.05s]
 }
 
 .sidebar .menu .item {
     @apply
     w-full flex justify-start sm:justify-center items-center cursor-pointer transition-all duration-300 text-text 
     hover:text-primary p-3 min-[1700px]:p-[14px] gap-2
+}
+
+.sidebar .menu .item.active .svg {
+    filter: drop-shadow(0 0 1px #00c500)
+        drop-shadow( 0 0 10px #00c500)
+        drop-shadow( 0 0 14px #00c500);
+    @apply
+    text-primary
 }
 
 .sidebar .menu .item .text {
@@ -312,7 +328,7 @@ body {
 
 .page .container .content .experiences .item {
     @apply
-    w-full flex flex-col relative rounded-md p-2 lg:p-3 border-[1px] border-primary border-dashed gap-0
+    w-full flex flex-col relative rounded-md p-2 lg:p-3 gap-0
     cursor-pointer bg-[#6E6E6E] bg-opacity-60 last:mb-10
 }
 
