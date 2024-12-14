@@ -15,7 +15,7 @@ html {
 
 * {
     @apply
-    m-0 p-0 box-border
+    m-0 p-0 box-border select-none
 }
 
 body {
@@ -87,25 +87,70 @@ body {
 
 .sidebar .menu div .light {
     @apply
-    hidden sm:block absolute bg-primary w-[3px] h-[50px] rounded-md left-[5px] top-[5px] 
+    hidden sm:block absolute bg-primary w-[3px] h-[46px] min-[1700px]:h-[52px] rounded-md left-[5px] top-[5px] 
     transition-all duration-[.05s]
 }
 
 .sidebar .menu .item {
     @apply
     w-full flex justify-start sm:justify-center items-center cursor-pointer transition-all duration-300 text-text 
-    hover:text-primary p-3 min-[1700px]:p-[14px] gap-2
+    p-3 min-[1700px]:p-[14px] gap-2 hover:text-primary
 }
-
-.sidebar .menu .item.active {
+.sidebar .menu .item:has(.home-svg) {
     @apply
-    text-primary
+    hover:text-primary
+}
+.sidebar .menu .item:has(.about-svg) {
+    @apply
+    hover:text-[#00ffff]
+}
+.sidebar .menu .item:has(.education-svg) {
+    @apply
+    hover:text-[#ff0000]
+}
+.sidebar .menu .item:has(.skills-svg) {
+    @apply
+    hover:text-[#fff700]
+}
+.sidebar .menu .item:has(.experiences-svg) {
+    @apply
+    hover:text-[#ff00ff]
 }
 
-.sidebar .menu .item.active .svg {
+.sidebar .menu .item.active .home-svg {
     filter: drop-shadow(0 0 1px #00c500)
         drop-shadow( 0 0 10px #00c500)
         drop-shadow( 0 0 14px #00c500);
+    @apply
+    text-primary
+}
+.sidebar .menu .item.active .about-svg {
+    filter: drop-shadow(0 0 1px #009de0)
+        drop-shadow( 0 0 10px #009de0)
+        drop-shadow( 0 0 14px #009de0);
+    @apply
+    text-[#00ffff]
+}
+.sidebar .menu .item.active .education-svg {
+    filter: drop-shadow(0 0 1px #db0000)
+        drop-shadow( 0 0 10px #db0000)
+        drop-shadow( 0 0 14px #db0000);
+    @apply
+    text-[#ff0000]
+}
+.sidebar .menu .item.active .skills-svg {
+    filter: drop-shadow(0 0 1px #cac300)
+        drop-shadow( 0 0 10px #cac300)
+        drop-shadow( 0 0 14px #cac300);
+    @apply
+    text-[#fff700]
+}
+.sidebar .menu .item.active .experiences-svg {
+    filter: drop-shadow(0 0 1px #cc00e2)
+        drop-shadow( 0 0 10px #cc00e2)
+        drop-shadow( 0 0 14px #cc00e2);
+    @apply
+    text-[#ff00ff]
 }
 
 .sidebar .menu .item .text {
@@ -245,9 +290,13 @@ body {
         @apply
         text-[#68a063]
     }
-    &.supabase {
+    &.axios {
         @apply
-        text-[#3ecf8e]
+        text-[#7936E5]
+    }
+    &.pinia {
+        @apply
+        text-[#FFE369]
     }
 }
 
@@ -265,7 +314,7 @@ body {
 .page .container .content .header {
     @apply
     text-center italic text-[2rem] lg:text-[3rem] xl:text-[3.5rem] min-[1700px]:text-[4rem]
-    text-primary mb-2 font-medium mt-4 lg:mt-0
+    mb-2 font-medium mt-4 lg:mt-0 text-primary
 }
 
 .page .container .content .text {

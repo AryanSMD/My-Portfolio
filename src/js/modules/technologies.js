@@ -10,21 +10,25 @@ const technologies = [
         value: 'Nuxt.js'
     },
     {
+        key: 'typescript',
+        value: 'TypeScript'
+    },
+    {
+        key: 'pinia',
+        value: 'Pinia'
+    },
+    {
         key: 'tailwindcss',
         value: 'TailwindCSS'
     },
     {
-        key: 'typescript',
-        value: 'TypeScript'
+        key: 'axios',
+        value: 'Axios'
     },
     {
         key: 'node',
         value: 'Node.js'
     },
-    {
-        key: 'supabase',
-        value: 'SupaBase'
-    }
 ];
 techno.innerHTML = technologies[0].value;
 techno.classList.add(technologies[0].key);
@@ -33,7 +37,7 @@ let i = 0;
 export default function changeTechnoText() {
     setInterval(() => {
         techno.classList.remove(technologies[i].key);
-        i != 5 ? i++ : i = 0;
+        i != 6 ? i++ : i = 0;
         techno.classList.add(technologies[i].key);
         techno.innerHTML = technologies[i].value;
     }, 5000);

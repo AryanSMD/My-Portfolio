@@ -746,6 +746,9 @@ html {
 * {
   margin: 0px;
   box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   padding: 0px;
 }
 
@@ -897,7 +900,7 @@ body {
   left: 5px;
   top: 5px;
   display: none;
-  height: 50px;
+  height: 46px;
   width: 3px;
   border-radius: 0.375rem;
   background-color: var(--primary);
@@ -910,6 +913,12 @@ body {
 @media (min-width: 640px) {
   .sidebar .menu div .light {
     display: block;
+  }
+}
+
+@media (min-width: 1700px) {
+  .sidebar .menu div .light {
+    height: 52px;
   }
 }
 
@@ -943,14 +952,67 @@ body {
   }
 }
 
-.sidebar .menu .item.active {
+.sidebar .menu .item:has(.home-svg):hover {
   color: var(--primary);
 }
 
-.sidebar .menu .item.active .svg {
+.sidebar .menu .item:has(.about-svg):hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 255 255 / var(--tw-text-opacity));
+}
+
+.sidebar .menu .item:has(.education-svg):hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
+.sidebar .menu .item:has(.skills-svg):hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 247 0 / var(--tw-text-opacity));
+}
+
+.sidebar .menu .item:has(.experiences-svg):hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 0 255 / var(--tw-text-opacity));
+}
+
+.sidebar .menu .item.active .home-svg {
   filter: drop-shadow(0 0 1px #00c500)
         drop-shadow( 0 0 10px #00c500)
         drop-shadow( 0 0 14px #00c500);
+  color: var(--primary)
+}
+
+.sidebar .menu .item.active .about-svg {
+  filter: drop-shadow(0 0 1px #009de0)
+        drop-shadow( 0 0 10px #009de0)
+        drop-shadow( 0 0 14px #009de0);
+  --tw-text-opacity: 1;
+  color: rgb(0 255 255 / var(--tw-text-opacity))
+}
+
+.sidebar .menu .item.active .education-svg {
+  filter: drop-shadow(0 0 1px #db0000)
+        drop-shadow( 0 0 10px #db0000)
+        drop-shadow( 0 0 14px #db0000);
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity))
+}
+
+.sidebar .menu .item.active .skills-svg {
+  filter: drop-shadow(0 0 1px #cac300)
+        drop-shadow( 0 0 10px #cac300)
+        drop-shadow( 0 0 14px #cac300);
+  --tw-text-opacity: 1;
+  color: rgb(255 247 0 / var(--tw-text-opacity))
+}
+
+.sidebar .menu .item.active .experiences-svg {
+  filter: drop-shadow(0 0 1px #cc00e2)
+        drop-shadow( 0 0 10px #cc00e2)
+        drop-shadow( 0 0 14px #cc00e2);
+  --tw-text-opacity: 1;
+  color: rgb(255 0 255 / var(--tw-text-opacity))
 }
 
 @media (min-width: 640px) {
@@ -1284,9 +1346,13 @@ body {
     --tw-text-opacity: 1;
     color: rgb(104 160 99 / var(--tw-text-opacity));
   }
-  &.supabase {
+  &.axios {
     --tw-text-opacity: 1;
-    color: rgb(62 207 142 / var(--tw-text-opacity));
+    color: rgb(121 54 229 / var(--tw-text-opacity));
+  }
+  &.pinia {
+    --tw-text-opacity: 1;
+    color: rgb(255 227 105 / var(--tw-text-opacity));
   }
 }
 
